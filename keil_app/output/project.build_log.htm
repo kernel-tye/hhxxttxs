@@ -1,0 +1,2495 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: ty zhangri0806@126.com, ty, LIC=03C6R-KBUG1-JJ76S-LC333-TR57H-ZTX8E
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      Segger\JL2CM3.dll V2.99.40.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+H:\desktop\bldc-master\keil_app\project.uvprojx
+Project File Date:  05/23/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'project'
+compiling digital_filter.c...
+..\digital_filter.c(75): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		c2 = sqrt((1.0 - c1) / 2.0);
+..\digital_filter.c(79): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		c1 = sqrt((1.0 + c1) / 2.0);
+..\digital_filter.c(109): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		arg = -(float)dir * 2.0 * M_PI * (float)i / (float)len;
+..\digital_filter.c(145): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			float val = 0.54 - 0.46 * cosf((2.0 * M_PI * (float)i)/(float)(len - 1));
+..\digital_filter.c(145): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			float val = 0.54 - 0.46 * cosf((2.0 * M_PI * (float)i)/(float)(len - 1));
+..\digital_filter.c(151): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			data[i] *= 0.54 - 0.46 * cosf((2.0 * M_PI * (float)i)/(float)(len - 1));
+..\digital_filter.c(151): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			data[i] *= 0.54 - 0.46 * cosf((2.0 * M_PI * (float)i)/(float)(len - 1));
+..\digital_filter.c: 7 warnings, 0 errors
+compiling buffer.c...
+..\buffer.c(99): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(number) < 1.5e-38) {
+..\buffer.c(108): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (sig_abs >= 0.5) {
+..\buffer.c: 2 warnings, 0 errors
+compiling crc.c...
+compiling eeprom.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\eeprom.c(373): warning:  #188-D: enumerated type mixed with another type
+  	FlashStatus = EE_EraseSectorIfNotEmpty(PAGE0_ID, VOLTAGE_RANGE);
+..\eeprom.c(391): warning:  #188-D: enumerated type mixed with another type
+  	FlashStatus = EE_EraseSectorIfNotEmpty(PAGE1_ID, VOLTAGE_RANGE);
+..\eeprom.c(609): warning:  #188-D: enumerated type mixed with another type
+  	FlashStatus = EE_EraseSectorIfNotEmpty(OldPageId, VOLTAGE_RANGE);
+..\eeprom.c: 4 warnings, 0 errors
+compiling comm_usb.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\comm_usb.c: 2 warnings, 0 errors
+compiling flash_helper.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\flash_helper.c: 2 warnings, 0 errors
+compiling comm_usb_serial.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\comm_usb_serial.c: 2 warnings, 0 errors
+compiling main.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\main.c(296): warning:  #223-D: function "bm_init" declared implicitly
+  	bm_init();
+..\main.c(303): warning:  #223-D: function "imu_reset_orientation" declared implicitly
+  	imu_reset_orientation();
+..\main.c: 4 warnings, 0 errors
+compiling irq_handlers.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\irq_handlers.c: 2 warnings, 0 errors
+compiling encoder.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\encoder.c(520): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle = ((float)HW_ENC_TIM->CNT * 360.0) / (float)enc_counts;
+..\encoder.c(574): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (fabsf(ts_mt) > 5000.0) {
+..\encoder.c(581): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		return encoder_read_deg() / 10000.0 + (360 * ts_mt) / 10000.0;
+..\encoder.c(581): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		return encoder_read_deg() / 10000.0 + (360 * ts_mt) / 10000.0;
+..\encoder.c(810): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			last_enc_angle = ((float)pos * 360.0) / 16384.0;
+..\encoder.c(811): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			UTILS_LP_FAST(spi_error_rate, 0.0, 1./AS5047_SAMPLE_RATE_HZ);
+..\encoder.c(814): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			UTILS_LP_FAST(spi_error_rate, 1.0, 1./AS5047_SAMPLE_RATE_HZ);
+..\encoder.c(839): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				UTILS_LP_FAST(encoder_no_magnet_error_rate, 1.0, 1./MT6816_SAMPLE_RATE_HZ);
+..\encoder.c(842): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				last_enc_angle = ((float)pos * 360.0) / 16384.0;
+..\encoder.c(843): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				UTILS_LP_FAST(spi_error_rate, 0.0, 1./MT6816_SAMPLE_RATE_HZ);
+..\encoder.c(844): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				UTILS_LP_FAST(encoder_no_magnet_error_rate, 0.0, 1./MT6816_SAMPLE_RATE_HZ);
+..\encoder.c(848): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			UTILS_LP_FAST(spi_error_rate, 1.0, 1./MT6816_SAMPLE_RATE_HZ);
+..\encoder.c(884): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				UTILS_LP_FAST(spi_error_rate, 0.0, 1./AD2S1205_SAMPLE_RATE_HZ);
+..\encoder.c(888): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				UTILS_LP_FAST(spi_error_rate, 1.0, 1./AD2S1205_SAMPLE_RATE_HZ);
+..\encoder.c(898): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				UTILS_LP_FAST(resolver_loss_of_tracking_error_rate, 1.0, 1./AD2S1205_SAMPLE_RATE_HZ);
+..\encoder.c(900): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				UTILS_LP_FAST(resolver_loss_of_tracking_error_rate, 0.0, 1./AD2S1205_SAMPLE_RATE_HZ);
+..\encoder.c(906): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				UTILS_LP_FAST(resolver_degradation_of_signal_error_rate, 1.0, 1./AD2S1205_SAMPLE_RATE_HZ);
+..\encoder.c(908): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				UTILS_LP_FAST(resolver_degradation_of_signal_error_rate, 0.0, 1./AD2S1205_SAMPLE_RATE_HZ);
+..\encoder.c(914): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				UTILS_LP_FAST(resolver_loss_of_signal_error_rate, 1.0, 1./AD2S1205_SAMPLE_RATE_HZ);
+..\encoder.c(916): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				UTILS_LP_FAST(resolver_loss_of_signal_error_rate, 0.0, 1./AD2S1205_SAMPLE_RATE_HZ);
+..\encoder.c(921): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				last_enc_angle = ((float)pos * 360.0) / 4096.0;
+..\encoder.c(1031): warning:  #2803-D: unrecognized GCC pragma
+  #pragma GCC push_options
+..\encoder.c(1032): warning:  #2803-D: unrecognized GCC pragma
+  #pragma GCC optimize ("O0")
+..\encoder.c(1081): warning:  #2803-D: unrecognized GCC pragma
+  #pragma GCC pop_options
+..\encoder.c(1149): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			last_enc_angle = (float)pos / 131072.0 * 360.0;
+..\encoder.c(1150): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			UTILS_LP_FAST(spi_error_rate, 0.0, 1.0 / AS5047_SAMPLE_RATE_HZ);
+..\encoder.c(1162): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			UTILS_LP_FAST(spi_error_rate, 1.0, 1.0 / AS5047_SAMPLE_RATE_HZ);
+..\encoder.c(109): warning:  #550-D: variable "sin_gain"  was set but never used
+  static float sin_gain = 0.0;
+..\encoder.c(110): warning:  #550-D: variable "sin_offset"  was set but never used
+  static float sin_offset = 0.0;
+..\encoder.c(111): warning:  #550-D: variable "cos_gain"  was set but never used
+  static float cos_gain = 0.0;
+..\encoder.c(112): warning:  #550-D: variable "cos_offset"  was set but never used
+  static float cos_offset = 0.0;
+..\encoder.c(113): warning:  #550-D: variable "sincos_filter_constant"  was set but never used
+  static float sincos_filter_constant = 0.0;
+..\encoder.c: 34 warnings, 0 errors
+compiling ledpwm.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\ledpwm.c(50): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (intensity < 0.0) {
+..\ledpwm.c(54): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (intensity > 1.0) {
+..\ledpwm.c: 4 warnings, 0 errors
+compiling comm_can.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\comm_can.c(419): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int32(buffer, (int32_t)(duty * 100000.0), &send_index);
+..\comm_can.c(427): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int32(buffer, (int32_t)(current * 1000.0), &send_index);
+..\comm_can.c(435): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int32(buffer, (int32_t)(current * 1000.0), &send_index);
+..\comm_can.c(444): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int32(buffer, (int32_t)(current * 1000.0), &send_index);
+..\comm_can.c(460): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int32(buffer, (int32_t)(pos * 1000000.0), &send_index);
+..\comm_can.c(1064): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int16(buffer, (int16_t)(mc_interface_get_tot_current_filtered() * 1e1), &send_index);
+..\comm_can.c(1065): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int16(buffer, (int16_t)(mc_interface_get_duty_cycle_now() * 1e3), &send_index);
+..\comm_can.c(1073): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int32(buffer, (int32_t)(mc_interface_get_amp_hours(false) * 1e4), &send_index);
+..\comm_can.c(1074): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int32(buffer, (int32_t)(mc_interface_get_amp_hours_charged(false) * 1e4), &send_index);
+..\comm_can.c(1082): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int32(buffer, (int32_t)(mc_interface_get_watt_hours(false) * 1e4), &send_index);
+..\comm_can.c(1083): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int32(buffer, (int32_t)(mc_interface_get_watt_hours_charged(false) * 1e4), &send_index);
+..\comm_can.c(1091): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int16(buffer, (int16_t)(mc_interface_temp_fet_filtered() * 1e1), &send_index);
+..\comm_can.c(1092): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int16(buffer, (int16_t)(mc_interface_temp_motor_filtered() * 1e1), &send_index);
+..\comm_can.c(1093): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int16(buffer, (int16_t)(mc_interface_get_tot_current_in_filtered() * 1e1), &send_index);
+..\comm_can.c(1094): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int16(buffer, (int16_t)(mc_interface_get_pid_pos_now() * 50.0), &send_index);
+..\comm_can.c(1103): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int16(buffer, (int16_t)(mc_interface_get_input_voltage_filtered() * 1e1), &send_index);
+..\comm_can.c(1344): warning:  #188-D: enumerated type mixed with another type
+  	CAN_PACKET_ID cmd = eid >> 8;
+..\comm_can.c(1525): warning:  #188-D: enumerated type mixed with another type
+  						ping_hw_last = data8[1];
+..\comm_can.c(1697): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				buffer_append_int32(buffer, (int32_t)(encoder_read_deg() * 100000.0), &index);
+..\comm_can.c(1718): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				stat_tmp->current = (float)buffer_get_int16(data8, &ind) / 10.0;
+..\comm_can.c(1719): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				stat_tmp->duty = (float)buffer_get_int16(data8, &ind) / 1000.0;
+..\comm_can.c(1732): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				stat_tmp_2->amp_hours = (float)buffer_get_int32(data8, &ind) / 1e4;
+..\comm_can.c(1733): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				stat_tmp_2->amp_hours_charged = (float)buffer_get_int32(data8, &ind) / 1e4;
+..\comm_can.c(1746): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				stat_tmp_3->watt_hours = (float)buffer_get_int32(data8, &ind) / 1e4;
+..\comm_can.c(1747): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				stat_tmp_3->watt_hours_charged = (float)buffer_get_int32(data8, &ind) / 1e4;
+..\comm_can.c(1760): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				stat_tmp_4->temp_fet = (float)buffer_get_int16(data8, &ind) / 10.0;
+..\comm_can.c(1761): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				stat_tmp_4->temp_motor = (float)buffer_get_int16(data8, &ind) / 10.0;
+..\comm_can.c(1762): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				stat_tmp_4->current_in = (float)buffer_get_int16(data8, &ind) / 10.0;
+..\comm_can.c(1763): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				stat_tmp_4->pid_pos_now = (float)buffer_get_int16(data8, &ind) / 50.0;
+..\comm_can.c(1777): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				stat_tmp_5->v_in = (float)buffer_get_int16(data8, &ind) / 1e1;
+..\comm_can.c: 32 warnings, 0 errors
+compiling packet.c...
+compiling conf_general.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\conf_general.c(578): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (mc_interface_get_duty_cycle_now() >= (spinup_to_duty / 2.0) && !switch_done) {
+..\conf_general.c(820): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (mc_interface_get_duty_cycle_now() >= (duty / 2.0) && !switch_done) {
+..\conf_general.c(862): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		samples += 1.0;
+..\conf_general.c(874): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	avg_voltage -= avg_current * res * 2.0;
+..\conf_general.c(876): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*linkage = avg_voltage / (sqrtf(3.0) * RPM2RADPS_f(avg_rpm));
+..\conf_general.c(887): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float timebase = 1.0 / (core_clock_freq / 1000000.0) * 1000.0;
+..\conf_general.c(889): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (deadtime_ns <= (timebase * 127.0)) {
+..\conf_general.c(893): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			DTG = deadtime_ns / (2.0 * timebase) - 64.0;
+..\conf_general.c(897): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				DTG = deadtime_ns / (8.0 * timebase) - 32.0;
+..\conf_general.c(901): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					DTG = deadtime_ns / (16.0 * timebase) - 32.0;
+..\conf_general.c(994): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		mcpwm_foc_set_openloop((float)i * current / 200.0, rpm_now);
+..\conf_general.c(1002): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		samples += 1.0;
+..\conf_general.c(1011): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		rpm_now += erpm_per_sec / 1000.0;
+..\conf_general.c(1028): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (cnt > 4000 && duty_now < (duty_max * 0.7)) {
+..\conf_general.c(1034): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (cnt > 4000 && duty < duty_still * 1.1) {
+..\conf_general.c(1059): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			samples2 += 1.0;
+..\conf_general.c(1068): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float rad_s = RPM2RADPS_f(rpm_now);
+..\conf_general.c(1076): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		mcconf->foc_observer_gain = 0.5e3 / SQ(*linkage);
+..\conf_general.c(1094): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			float rad_s_now = RPM2RADPS_f(mcpwm_foc_get_rpm_faster());
+..\conf_general.c(1095): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (fabsf(mcpwm_foc_get_duty_cycle_now()) < 0.02) {
+..\conf_general.c(1109): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			linkage_samples += 1.0;
+..\conf_general.c(1223): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			mcpwm_foc_set_openloop_phase((float)i * current / 1000.0, 0.0);
+..\conf_general.c(1244): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (diff > 2.0 && (diff_mid - diff / 2.0) < (diff / 4)) {
+..\conf_general.c(1244): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (diff > 2.0 && (diff_mid - diff / 2.0) < (diff / 4)) {
+..\conf_general.c(1296): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float bw = 1.0 / (tc * 1e-6);
+..\conf_general.c(1299): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float gain = 1.0e-3 / SQ(lambda);
+..\conf_general.c(1304): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	mcconf->foc_observer_gain = gain * 1e6;
+..\conf_general.c(1310): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (current_start < (current_min * 1.1)) {
+..\conf_general.c(1311): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		current_start = current_min * 1.1;
+..\conf_general.c(1320): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	for (float i = current_start;i < current_max;i *= 1.5) {
+..\conf_general.c(1329): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if ((i * i * res_tmp * 1.5) >= (max_power_loss / 5.0)) {
+..\conf_general.c(1329): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if ((i * i * res_tmp * 1.5) >= (max_power_loss / 5.0)) {
+..\conf_general.c(1339): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*l = mcpwm_foc_measure_inductance_current(i_last, 100, 0, ld_lq_diff) * 1e-6;
+..\conf_general.c(1340): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*ld_lq_diff *= 1e-6;
+..\conf_general.c(1341): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*i_max = sqrtf(max_power_loss / *r / 1.5);
+..\conf_general.c(1386): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (fabsf(rpm1) < 100.0 && fabsf(rpm2) < 100.0) {
+..\conf_general.c(1386): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (fabsf(rpm1) < 100.0 && fabsf(rpm2) < 100.0) {
+..\conf_general.c(1399): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return fabsf(rpm1) < 100.0 && fabsf(rpm2) < 100.0;
+..\conf_general.c(1399): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return fabsf(rpm1) < 100.0 && fabsf(rpm2) < 100.0;
+..\conf_general.c(1656): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	int res = conf_general_measure_flux_linkage_openloop(i_max / 2.5, 0.3, 1800, r, l,
+..\conf_general.c(1723): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		result = conf_general_autodetect_apply_sensors_foc(i_max / 3.0,
+..\conf_general.c(1811): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(min_current_in) > 0.001) {
+..\conf_general.c(1817): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(max_current_in) > 0.001) {
+..\conf_general.c(1823): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(openloop_rpm) > 0.001) {
+..\conf_general.c(1829): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(sl_erpm) > 0.001) {
+..\conf_general.c: 47 warnings, 0 errors
+compiling mc_interface.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\mc_interface.c(545): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_NONE: return "FAULT_CODE_NONE"; break;
+..\mc_interface.c(546): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_OVER_VOLTAGE: return "FAULT_CODE_OVER_VOLTAGE"; break;
+..\mc_interface.c(547): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_UNDER_VOLTAGE: return "FAULT_CODE_UNDER_VOLTAGE"; break;
+..\mc_interface.c(548): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_DRV: return "FAULT_CODE_DRV"; break;
+..\mc_interface.c(549): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_ABS_OVER_CURRENT: return "FAULT_CODE_ABS_OVER_CURRENT"; break;
+..\mc_interface.c(550): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_OVER_TEMP_FET: return "FAULT_CODE_OVER_TEMP_FET"; break;
+..\mc_interface.c(551): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_OVER_TEMP_MOTOR: return "FAULT_CODE_OVER_TEMP_MOTOR"; break;
+..\mc_interface.c(552): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_GATE_DRIVER_OVER_VOLTAGE: return "FAULT_CODE_GATE_DRIVER_OVER_VOLTAGE"; break;
+..\mc_interface.c(553): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_GATE_DRIVER_UNDER_VOLTAGE: return "FAULT_CODE_GATE_DRIVER_UNDER_VOLTAGE"; break;
+..\mc_interface.c(554): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_MCU_UNDER_VOLTAGE: return "FAULT_CODE_MCU_UNDER_VOLTAGE"; break;
+..\mc_interface.c(555): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_BOOTING_FROM_WATCHDOG_RESET: return "FAULT_CODE_BOOTING_FROM_WATCHDOG_RESET"; break;
+..\mc_interface.c(556): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_ENCODER_SPI: return "FAULT_CODE_ENCODER_SPI"; break;
+..\mc_interface.c(557): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_ENCODER_SINCOS_BELOW_MIN_AMPLITUDE: return "FAULT_CODE_ENCODER_SINCOS_BELOW_MIN_AMPLITUDE"; break;
+..\mc_interface.c(558): warning:  #111-D: statement is unreachable
+  	case FAULT_CODE_ENCODER_SINCOS_ABOVE_MAX_AMPLITUDE: return "FAULT_CODE_ENCODER_SINCOS_ABOVE_MAX_AMPLITUDE"; break;
+..\mc_interface.c(597): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(dutyCycle) > 0.001) {
+..\mc_interface.c(623): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(dutyCycle) > 0.001) {
+..\mc_interface.c(649): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(rpm) > 0.001) {
+..\mc_interface.c(714): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(current) > 0.001) {
+..\mc_interface.c(740): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(current) > 0.001) {
+..\mc_interface.c(777): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(val) > 0.001) {
+..\mc_interface.c(791): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(val) > 0.001) {
+..\mc_interface.c(805): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(current) > 0.001) {
+..\mc_interface.c(838): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(val) > 0.001) {
+..\mc_interface.c(1514): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		battery_avg_voltage_left = ((3.2 * (float)(conf->si_battery_cells) + v_in) / 2.0);
+..\mc_interface.c(1518): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		ah_tot *= 0.85; // 0.85 because the battery is not fully depleted at 3.2V / cell
+..\mc_interface.c(1524): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		battery_avg_voltage_left = ((2.8 * (float)(conf->si_battery_cells) + v_in) / 2.0);
+..\mc_interface.c(1532): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		battery_avg_voltage_left = ((2.1 * (float)(conf->si_battery_cells) + v_in) / 2.0);
+..\mc_interface.c(1511): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "batt_left"  (declared at line 1515)
+  	switch (conf->si_battery_type) {
+  	^
+..\mc_interface.c(1563): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return (rpm / 60.0) * conf->si_wheel_diameter * M_PI / conf->si_gear_ratio;
+..\mc_interface.c(1604): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < 0.1) {
+..\mc_interface.c(1610): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (msg2->id >= 0 && UTILS_AGE_S(msg2->rx_time) < 0.1) {
+..\mc_interface.c(1616): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (msg3->id >= 0 && UTILS_AGE_S(msg3->rx_time) < 0.1) {
+..\mc_interface.c(1622): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (msg4->id >= 0 && UTILS_AGE_S(msg4->rx_time) < 0.1) {
+..\mc_interface.c(1681): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(delay_sec);
+..\mc_interface.c(1682): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (delay_sec > 5.0) {
+..\mc_interface.c(1774): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_LP_FAST(motor->m_input_voltage_filtered, input_voltage, 0.02);
+..\mc_interface.c(1787): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (voltage_diff_now > 1.0e-3) {
+..\mc_interface.c(1790): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		const float max_voltage = (conf_now->l_max_vin * 0.05);
+..\mc_interface.c(1796): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			wrong_voltage_integrator = max_voltage * 2.0;
+..\mc_interface.c(1799): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (wrong_voltage_integrator > 1.0) {
+..\mc_interface.c(1800): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			wrong_voltage_integrator -= 1.0;
+..\mc_interface.c(1899): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(current_filtered) > 1.0) {
+..\mc_interface.c(1905): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		curr_diff_samples += 1.0 / f_samp;
+..\mc_interface.c(1907): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (curr_diff_samples >= 0.01) {
+..\mc_interface.c(1908): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (curr_diff_sum > 0.0) {
+..\mc_interface.c(2035): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				m_phase_samples[m_sample_now] = (uint8_t)(mcpwm_foc_get_phase() / 360.0 * 250.0);
+..\mc_interface.c(2071): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			m_f_sw_samples[m_sample_now] = (int16_t)(f_samp / 10.0);
+..\mc_interface.c(2117): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_LP_FAST(motor->m_temp_fet, NTC_TEMP(is_motor_1 ? ADC_IND_TEMP_MOS : ADC_IND_TEMP_MOS_M2), 0.1);
+..\mc_interface.c(2122): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = is_motor_1 ? NTC_TEMP_MOTOR(conf->m_ntc_motor_beta) : NTC_TEMP_MOTOR_2(conf->m_ntc_motor_beta);
+..\mc_interface.c(2122): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = is_motor_1 ? NTC_TEMP_MOTOR(conf->m_ntc_motor_beta) : NTC_TEMP_MOTOR_2(conf->m_ntc_motor_beta);
+..\mc_interface.c(2126): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = is_motor_1 ? NTC100K_TEMP_MOTOR(conf->m_ntc_motor_beta) : NTC100K_TEMP_MOTOR_2(conf->m_ntc_motor_beta);
+..\mc_interface.c(2126): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = is_motor_1 ? NTC100K_TEMP_MOTOR(conf->m_ntc_motor_beta) : NTC100K_TEMP_MOTOR_2(conf->m_ntc_motor_beta);
+..\mc_interface.c(2130): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = is_motor_1 ? PTC_TEMP_MOTOR(1000.0, conf->m_ptc_motor_coeff, 100) : PTC_TEMP_MOTOR_2(1000.0, conf->m_ptc_motor_coeff, 100);
+..\mc_interface.c(2130): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = is_motor_1 ? PTC_TEMP_MOTOR(1000.0, conf->m_ptc_motor_coeff, 100) : PTC_TEMP_MOTOR_2(1000.0, conf->m_ptc_motor_coeff, 100);
+..\mc_interface.c(2138): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float res = NTC_RES_MOTOR(ADC_Value[is_motor_1 ? ADC_IND_TEMP_MOTOR : ADC_IND_TEMP_MOTOR_2]);
+..\mc_interface.c(2140): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = 0.0000000102114874947423 * pow2 * res - 0.000069967997703501 * pow2 +
+..\mc_interface.c(2140): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = 0.0000000102114874947423 * pow2 * res - 0.000069967997703501 * pow2 +
+..\mc_interface.c(2141): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\mc_interface.c(2145): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float res = NTC_RES_MOTOR(ADC_Value[is_motor_1 ? ADC_IND_TEMP_MOTOR : ADC_IND_TEMP_MOTOR_2]);
+..\mc_interface.c(2146): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = -7.82531699e-12 * res * res * res * res + 6.34445902e-8 * res * res * res -
+..\mc_interface.c(2147): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\mc_interface.c(2147): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\mc_interface.c(2151): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = is_motor_1 ? NTCX_TEMP_MOTOR(conf->m_ntcx_ptcx_res, conf->m_ntc_motor_beta, conf->m_ntcx_ptcx_temp_base) :
+..\mc_interface.c(2151): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = is_motor_1 ? NTCX_TEMP_MOTOR(conf->m_ntcx_ptcx_res, conf->m_ntc_motor_beta, conf->m_ntcx_ptcx_temp_base) :
+..\mc_interface.c(2152): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				NTCX_TEMP_MOTOR_2(conf->m_ntcx_ptcx_res, conf->m_ntc_motor_beta, conf->m_ntcx_ptcx_temp_base);
+..\mc_interface.c(2152): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				NTCX_TEMP_MOTOR_2(conf->m_ntcx_ptcx_res, conf->m_ntc_motor_beta, conf->m_ntcx_ptcx_temp_base);
+..\mc_interface.c(2156): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		temp_motor = is_motor_1 ? PTC_TEMP_MOTOR(conf->m_ntcx_ptcx_res, conf->m_ptc_motor_coeff, conf->m_ntcx_ptcx_temp_base) :
+..\mc_interface.c(2157): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				PTC_TEMP_MOTOR_2(conf->m_ntcx_ptcx_res, conf->m_ptc_motor_coeff, conf->m_ntcx_ptcx_temp_base);
+..\mc_interface.c(2165): warning:  #222-D: floating-point operation result is out of range
+  	if (UTILS_IS_NAN(temp_motor) || UTILS_IS_INF(temp_motor) || temp_motor > 600.0 || temp_motor < -200.0) {
+..\mc_interface.c(2165): warning:  #222-D: floating-point operation result is out of range
+  	if (UTILS_IS_NAN(temp_motor) || UTILS_IS_INF(temp_motor) || temp_motor > 600.0 || temp_motor < -200.0) {
+..\mc_interface.c(2165): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (UTILS_IS_NAN(temp_motor) || UTILS_IS_INF(temp_motor) || temp_motor > 600.0 || temp_motor < -200.0) {
+..\mc_interface.c(2169): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_LP_FAST(motor->m_temp_motor, temp_motor, MOTOR_TEMP_LPF);
+..\mc_interface.c(2181): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (motor->m_temp_fet < (conf->l_temp_fet_start + 0.1)) {
+..\mc_interface.c(2183): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	} else if (motor->m_temp_fet > (conf->l_temp_fet_end - 0.1)) {
+..\mc_interface.c(2196): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			lo_min_mos = SIGN(l_current_min_tmp) * maxc;
+..\mc_interface.c(2200): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			lo_max_mos = SIGN(l_current_max_tmp) * maxc;
+..\mc_interface.c(2207): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (motor->m_temp_motor < (conf->l_temp_motor_start + 0.1)) {
+..\mc_interface.c(2209): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	} else if (motor->m_temp_motor > (conf->l_temp_motor_end - 0.1)) {
+..\mc_interface.c(2222): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			lo_min_mot = SIGN(l_current_min_tmp) * maxc;
+..\mc_interface.c(2226): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			lo_max_mot = SIGN(l_current_max_tmp) * maxc;
+..\mc_interface.c(2238): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (motor->m_temp_fet < (temp_fet_accel_start + 0.1)) {
+..\mc_interface.c(2240): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	} else if (motor->m_temp_fet > (temp_fet_accel_end - 0.1)) {
+..\mc_interface.c(2248): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (motor->m_temp_motor < (temp_motor_accel_start + 0.1)) {
+..\mc_interface.c(2250): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	} else if (motor->m_temp_motor > (temp_motor_accel_end - 0.1)) {
+..\mc_interface.c(2261): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (rpm_now < (rpm_pos_cut_start + 0.1)) {
+..\mc_interface.c(2263): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	} else if (rpm_now > (rpm_pos_cut_end - 0.1)) {
+..\mc_interface.c(2273): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (rpm_now > (rpm_neg_cut_start - 0.1)) {
+..\mc_interface.c(2275): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	} else if (rpm_now < (rpm_neg_cut_end + 0.1)) {
+..\mc_interface.c(2283): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (duty_now_abs < (conf->l_duty_start * conf->l_max_duty) || conf->l_duty_start > 0.99) {
+..\mc_interface.c(2312): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (v_in > (conf->l_battery_cut_start - 0.1)) {
+..\mc_interface.c(2314): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	} else if (v_in < (conf->l_battery_cut_end + 0.1)) {
+..\mc_interface.c(2368): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_LP_FAST(motor->m_input_voltage_filtered_slower, motor->m_input_voltage_filtered, 0.01);
+..\mc_interface.c(2454): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (mc_interface_temp_motor_filtered() > 50.0) {AUX_ON();} else {AUX_OFF();}
+..\mc_interface.c(2458): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (mc_interface_temp_fet_filtered() > 50.0) {AUX_ON();} else {AUX_OFF();}
+..\mc_interface.c(2462): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (mc_interface_temp_motor_filtered() > 70.0) {AUX_ON();} else {AUX_OFF();}
+..\mc_interface.c(2466): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (mc_interface_temp_fet_filtered() > 70.0) {AUX_ON();} else {AUX_OFF();}
+..\mc_interface.c(2470): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (mc_interface_temp_motor_filtered() > 50.0 ||
+..\mc_interface.c(2471): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				mc_interface_temp_fet_filtered() > 50.0) {AUX_ON();} else {AUX_OFF();}
+..\mc_interface.c(2475): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (mc_interface_temp_motor_filtered() > 70.0 ||
+..\mc_interface.c(2476): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				mc_interface_temp_fet_filtered() > 70.0) {AUX_ON();} else {AUX_OFF();}
+..\mc_interface.c(2485): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			encoder_spi_get_error_rate() > 0.05) {
+..\mc_interface.c(2492): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			encoder_get_no_magnet_error_rate() > 0.05) {
+..\mc_interface.c(2500): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (encoder_sincos_get_signal_below_min_error_rate() > 0.05)
+..\mc_interface.c(2502): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (encoder_sincos_get_signal_above_max_error_rate() > 0.05)
+..\mc_interface.c(2523): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (encoder_resolver_loss_of_tracking_error_rate() > 0.05)
+..\mc_interface.c(2525): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (encoder_resolver_degradation_of_signal_error_rate() > 0.05)
+..\mc_interface.c(2527): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (encoder_resolver_loss_of_signal_error_rate() > 0.04)
+..\mc_interface.c(2567): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			UTILS_LP_FAST(motor->m_motor_current_unbalance_error_rate, 1.0, (1 / 1000.0));
+..\mc_interface.c(2569): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			UTILS_LP_FAST(motor->m_motor_current_unbalance_error_rate, 0.0, (1 / 1000.0));
+..\mc_interface.c(2572): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (motor->m_motor_current_unbalance_error_rate > MCCONF_MAX_CURRENT_UNBALANCE_RATE) {
+..\mc_interface.c(2769): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				buffer_append_float32_auto(buffer, ((float)m_ph1_samples[ind_samp] / 4096.0 * V_REG) * ((VIN_R1 + VIN_R2) / VIN_R2) * ADC_VOLTS_PH_FACTOR, &index);
+..\mc_interface.c(2770): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				buffer_append_float32_auto(buffer, ((float)m_ph2_samples[ind_samp] / 4096.0 * V_REG) * ((VIN_R1 + VIN_R2) / VIN_R2) * ADC_VOLTS_PH_FACTOR, &index);
+..\mc_interface.c(2771): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				buffer_append_float32_auto(buffer, ((float)m_ph3_samples[ind_samp] / 4096.0 * V_REG) * ((VIN_R1 + VIN_R2) / VIN_R2) * ADC_VOLTS_PH_FACTOR, &index);
+..\mc_interface.c(2772): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				buffer_append_float32_auto(buffer, ((float)m_vzero_samples[ind_samp] / 4096.0 * V_REG) * ((VIN_R1 + VIN_R2) / VIN_R2) * ADC_VOLTS_INPUT_FACTOR, &index);
+..\mc_interface.c(2776): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			buffer_append_float32_auto(buffer, (float)m_f_sw_samples[ind_samp] * 10.0, &index);
+..\mc_interface.c(2830): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			fdata.temperature = NTC_TEMP(ADC_IND_TEMP_MOS);
+..\mc_interface.c: 118 warnings, 0 errors
+compiling commands.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\commands.c(178): warning:  #188-D: enumerated type mixed with another type
+  	packet_id = data[0];
+..\commands.c(447): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		mc_interface_set_duty((float)buffer_get_int32(data, &ind) / 100000.0);
+..\commands.c(453): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		mc_interface_set_current((float)buffer_get_int32(data, &ind) / 1000.0);
+..\commands.c(459): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		mc_interface_set_brake_current((float)buffer_get_int32(data, &ind) / 1000.0);
+..\commands.c(471): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		mc_interface_set_pid_pos((float)buffer_get_int32(data, &ind) / 1000000.0);
+..\commands.c(483): warning:  #188-D: enumerated type mixed with another type
+  		display_position_mode = data[ind++];
+..\commands.c(621): warning:  #188-D: enumerated type mixed with another type
+  		mode = data[ind++];
+..\commands.c(638): warning:  #111-D: statement is unreachable
+  		break;
+..\commands.c(649): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_ppm_get_decoded_level() * 1000000.0), &ind);
+..\commands.c(650): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(servodec_get_last_pulse_len(0) * 1000000.0), &ind);
+..\commands.c(658): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_adc_get_decoded_level() * 1000000.0), &ind);
+..\commands.c(659): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_adc_get_voltage() * 1000000.0), &ind);
+..\commands.c(660): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_adc_get_decoded_level2() * 1000000.0), &ind);
+..\commands.c(661): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_adc_get_voltage2() * 1000000.0), &ind);
+..\commands.c(669): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_nunchuk_get_decoded_chuk() * 1000000.0), &ind);
+..\commands.c(677): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_balance_get_pid_output() * 1000000.0), &ind);
+..\commands.c(678): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_balance_get_pitch_angle() * 1000000.0), &ind);
+..\commands.c(679): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_balance_get_roll_angle() * 1000000.0), &ind);
+..\commands.c(681): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_balance_get_motor_current() * 1000000.0), &ind);
+..\commands.c(682): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_balance_get_debug1() * 1000000.0), &ind);
+..\commands.c(685): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_balance_get_adc1() * 1000000.0), &ind);
+..\commands.c(686): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_balance_get_adc2() * 1000000.0), &ind);
+..\commands.c(687): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(send_buffer, (int32_t)(app_balance_get_debug2() * 1000000.0), &ind);
+..\commands.c(783): warning:  #188-D: enumerated type mixed with another type
+  		gpdrive_set_mode(data[ind++]);
+..\commands.c(925): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < 0.1) {
+..\commands.c(926): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					controller_num += 1.0;
+..\commands.c(994): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < 0.1) {
+..\commands.c(1091): warning:  #223-D: function "imu_get_rpy" declared implicitly
+  		imu_get_rpy(rpy);
+..\commands.c(1092): warning:  #223-D: function "imu_get_accel" declared implicitly
+  		imu_get_accel(acc);
+..\commands.c(1093): warning:  #223-D: function "imu_get_gyro" declared implicitly
+  		imu_get_gyro(gyro);
+..\commands.c(1094): warning:  #223-D: function "imu_get_mag" declared implicitly
+  		imu_get_mag(mag);
+..\commands.c(1095): warning:  #223-D: function "imu_get_quaternions" declared implicitly
+  		imu_get_quaternions(q);
+..\commands.c(1263): warning:  #188-D: enumerated type mixed with another type
+  		appconf->can_mode = mode;
+..\commands.c(1597): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	buffer_append_int32(buffer, (int32_t)(rotor_pos * 100000.0), &index);
+..\commands.c(1612): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		buffer_append_int32(buffer, (int32_t)(samples[i] * 10000.0), &index);
+..\commands.c(1709): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		ctrl_loop_freq = mcconf->foc_f_zv / 2.0;
+..\commands.c(1714): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      if (ctrl_loop_freq >= (hw_lim_upper(HW_LIM_FOC_CTRL_LOOP_FREQ) * 0.9)) {
+..\commands.c(1716): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      } else if (ctrl_loop_freq >= (hw_lim_upper(HW_LIM_FOC_CTRL_LOOP_FREQ) * 0.7)) {
+..\commands.c(1878): warning:  #188-D: enumerated type mixed with another type
+  		packet_id = data[0];
+..\commands.c(1902): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			buffer_append_int32(send_buffer, (int32_t)(detect_cycle_int_limit * 1000.0), &ind);
+..\commands.c(1903): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			buffer_append_int32(send_buffer, (int32_t)(detect_coupling_k * 1000.0), &ind);
+..\commands.c(2141): warning:  #223-D: function "bm_connect" declared implicitly
+  			buffer_append_int16(send_buffer, bm_connect(), &ind);
+..\commands.c(2150): warning:  #223-D: function "bm_erase_flash_all" declared implicitly
+  			buffer_append_int16(send_buffer, bm_erase_flash_all(), &ind);
+..\commands.c(2169): warning:  #223-D: function "bm_write_flash" declared implicitly
+  			int res = bm_write_flash(addr, data + ind, len - ind);
+..\commands.c(2182): warning:  #223-D: function "bm_reboot" declared implicitly
+  			buffer_append_int16(send_buffer, bm_reboot(), &ind);
+..\commands.c(2189): warning:  #223-D: function "bm_halt_req" declared implicitly
+  			bm_halt_req();
+..\commands.c(2199): warning:  #223-D: function "bm_disconnect" declared implicitly
+  			bm_disconnect();
+..\commands.c(2200): warning:  #223-D: function "bm_leave_nrf_debug_mode" declared implicitly
+  			bm_leave_nrf_debug_mode();
+..\commands.c(2210): warning:  #223-D: function "bm_default_swd_pins" declared implicitly
+  			bm_default_swd_pins();
+..\commands.c(2225): warning:  #223-D: function "bm_change_swd_pins" declared implicitly
+  			bm_change_swd_pins(NRF5x_SWDIO_GPIO, NRF5x_SWDIO_PIN,
+..\commands.c(2244): warning:  #223-D: function "bm_mem_read" declared implicitly
+  			int res = bm_mem_read(addr, send_buffer + 3, read_len);
+..\commands.c(2258): warning:  #223-D: function "bm_mem_write" declared implicitly
+  			int res = bm_mem_write(addr, data + ind, len - ind);
+..\commands.c(2272): warning:  #223-D: function "imu_get_calibration" declared implicitly
+  			imu_get_calibration(yaw, imu_cal);
+..\commands.c: 55 warnings, 0 errors
+compiling confgenerator.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\confgenerator.c(383): warning:  #188-D: enumerated type mixed with another type
+  	conf->pwm_mode = buffer[ind++];
+..\confgenerator.c(384): warning:  #188-D: enumerated type mixed with another type
+  	conf->comm_mode = buffer[ind++];
+..\confgenerator.c(385): warning:  #188-D: enumerated type mixed with another type
+  	conf->motor_type = buffer[ind++];
+..\confgenerator.c(386): warning:  #188-D: enumerated type mixed with another type
+  	conf->sensor_mode = buffer[ind++];
+..\confgenerator.c(442): warning:  #188-D: enumerated type mixed with another type
+  	conf->foc_sensor_mode = buffer[ind++];
+..\confgenerator.c(478): warning:  #188-D: enumerated type mixed with another type
+  	conf->foc_cc_decoupling = buffer[ind++];
+..\confgenerator.c(479): warning:  #188-D: enumerated type mixed with another type
+  	conf->foc_observer_type = buffer[ind++];
+..\confgenerator.c(486): warning:  #188-D: enumerated type mixed with another type
+  	conf->foc_hfi_samples = buffer[ind++];
+..\confgenerator.c(499): warning:  #188-D: enumerated type mixed with another type
+  	conf->foc_mtpa_mode = buffer[ind++];
+..\confgenerator.c(509): warning:  #188-D: enumerated type mixed with another type
+  	conf->sp_pid_loop_rate = buffer[ind++];
+..\confgenerator.c(533): warning:  #188-D: enumerated type mixed with another type
+  	conf->m_sensor_port_mode = buffer[ind++];
+..\confgenerator.c(535): warning:  #188-D: enumerated type mixed with another type
+  	conf->m_drv8301_oc_mode = buffer[ind++];
+..\confgenerator.c(541): warning:  #188-D: enumerated type mixed with another type
+  	conf->m_out_aux_mode = buffer[ind++];
+..\confgenerator.c(542): warning:  #188-D: enumerated type mixed with another type
+  	conf->m_motor_temp_sens_type = buffer[ind++];
+..\confgenerator.c(550): warning:  #188-D: enumerated type mixed with another type
+  	conf->si_battery_type = buffer[ind++];
+..\confgenerator.c(554): warning:  #188-D: enumerated type mixed with another type
+  	conf->bms.type = buffer[ind++];
+..\confgenerator.c(559): warning:  #188-D: enumerated type mixed with another type
+  	conf->bms.fwd_can_mode = buffer[ind++];
+..\confgenerator.c(575): warning:  #188-D: enumerated type mixed with another type
+  	conf->send_can_status = buffer[ind++];
+..\confgenerator.c(577): warning:  #188-D: enumerated type mixed with another type
+  	conf->can_baud_rate = buffer[ind++];
+..\confgenerator.c(580): warning:  #188-D: enumerated type mixed with another type
+  	conf->shutdown_mode = buffer[ind++];
+..\confgenerator.c(581): warning:  #188-D: enumerated type mixed with another type
+  	conf->can_mode = buffer[ind++];
+..\confgenerator.c(583): warning:  #188-D: enumerated type mixed with another type
+  	conf->uavcan_raw_mode = buffer[ind++];
+..\confgenerator.c(586): warning:  #188-D: enumerated type mixed with another type
+  	conf->kill_sw_mode = buffer[ind++];
+..\confgenerator.c(587): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_to_use = buffer[ind++];
+..\confgenerator.c(588): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_ppm_conf.ctrl_type = buffer[ind++];
+..\confgenerator.c(595): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_ppm_conf.safe_start = buffer[ind++];
+..\confgenerator.c(598): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_ppm_conf.throttle_exp_mode = buffer[ind++];
+..\confgenerator.c(607): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_adc_conf.ctrl_type = buffer[ind++];
+..\confgenerator.c(615): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_adc_conf.safe_start = buffer[ind++];
+..\confgenerator.c(622): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_adc_conf.throttle_exp_mode = buffer[ind++];
+..\confgenerator.c(630): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_chuk_conf.ctrl_type = buffer[ind++];
+..\confgenerator.c(637): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_chuk_conf.throttle_exp_mode = buffer[ind++];
+..\confgenerator.c(644): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_nrf_conf.speed = buffer[ind++];
+..\confgenerator.c(645): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_nrf_conf.power = buffer[ind++];
+..\confgenerator.c(646): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_nrf_conf.crc_type = buffer[ind++];
+..\confgenerator.c(647): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_nrf_conf.retry_delay = buffer[ind++];
+..\confgenerator.c(718): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_pas_conf.ctrl_type = buffer[ind++];
+..\confgenerator.c(719): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_pas_conf.sensor_type = buffer[ind++];
+..\confgenerator.c(729): warning:  #188-D: enumerated type mixed with another type
+  	conf->imu_conf.type = buffer[ind++];
+..\confgenerator.c(730): warning:  #188-D: enumerated type mixed with another type
+  	conf->imu_conf.mode = buffer[ind++];
+..\confgenerator.c(953): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_ppm_conf.safe_start = APPCONF_PPM_SAFE_START;
+..\confgenerator.c(973): warning:  #188-D: enumerated type mixed with another type
+  	conf->app_adc_conf.safe_start = APPCONF_ADC_SAFE_START;
+..\confgenerator.c: 43 warnings, 0 errors
+compiling servo_dec.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\servo_dec.c(46): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	last_len_received[0] = ((float)icuGetWidthX(icup) / ((float)TIMER_FREQ / 1000.0));
+..\servo_dec.c(51): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (len < (len_set * 1.5)) {
+..\servo_dec.c(57): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	} else if (len < 0.0) {
+..\servo_dec.c(58): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if ((len + pulse_start) > (pulse_start * 0.8)) {
+..\servo_dec.c(66): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (len >= 0.0) {
+..\servo_dec.c(68): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			float c = (len * 2.0 - len_set) / len_set;
+..\servo_dec.c(78): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			servo_pos[0] = (len * 2.0 - len_set) / len_set;
+..\servo_dec.c: 9 warnings, 0 errors
+compiling servo_simple.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\servo_simple.c(97): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	us *= (float)TIM_CLOCK / 1000000.0;
+..\servo_simple.c: 3 warnings, 0 errors
+compiling timeout.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\timeout.c(200): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			kill_sw = ADC_VOLTS(ADC_IND_EXT2) < 1.65;
+..\timeout.c(204): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			kill_sw = ADC_VOLTS(ADC_IND_EXT2) > 1.65;
+..\timeout.c: 4 warnings, 0 errors
+compiling virtual_motor.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\virtual_motor.c(130): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		virtual_motor.Ts = (1.0 / m_conf->foc_f_zv) ;
+..\virtual_motor.c(132): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		virtual_motor.Ts = (1.0 / (m_conf->foc_f_zv / 2.0));
+..\virtual_motor.c(138): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if(m_conf->foc_motor_ld_lq_diff > 0.0){
+..\virtual_motor.c(162): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return RAD2DEG_f(virtual_motor.phi);
+..\virtual_motor.c(217): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		virtual_motor.phi = DEG2RAD_f(mcpwm_foc_get_phase());
+..\virtual_motor.c(230): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if(tempVoltage != 0.0){
+..\virtual_motor.c(394): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	virtual_motor.ib = -0.5 * virtual_motor.i_alpha + SQRT3_BY_2 * virtual_motor.i_beta;
+..\virtual_motor.c(395): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	virtual_motor.ic = -0.5 * virtual_motor.i_alpha - SQRT3_BY_2 * virtual_motor.i_beta;
+..\virtual_motor.c(398): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	virtual_motor.vb = -0.5 * virtual_motor.v_alpha + SQRT3_BY_2 * virtual_motor.v_beta;
+..\virtual_motor.c(399): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	virtual_motor.vc = -0.5 * virtual_motor.v_alpha - SQRT3_BY_2 * virtual_motor.v_beta;
+..\virtual_motor.c: 11 warnings, 0 errors
+compiling utils.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\utils.c(61): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (*angle < 0.0) {
+..\utils.c(62): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*angle += 360.0;
+..\utils.c(77): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*angle += 2.0 * M_PI;
+..\utils.c(81): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*angle -= 2.0 * M_PI;
+..\utils.c(144): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (*value > 0.0) {
+..\utils.c(145): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			*value = k * *value + max * (1.0 - k);
+..\utils.c(147): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			*value = -(k * -*value + max * (1.0 - k));
+..\utils.c(178): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	while (difference > 180.0) difference -= 2.0 * 180.0;
+..\utils.c(193): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	while (difference < -M_PI) difference += 2.0 * M_PI;
+..\utils.c(194): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	while (difference > M_PI) difference -= 2.0 * M_PI;
+..\utils.c(313): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float abs_y = fabsf(y) + 1e-20; // kludge to prevent 0/0 condition
+..\utils.c(319): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle = ((0.1963 * rsq) - 0.9817) * r + (M_PI / 4.0);
+..\utils.c(319): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle = ((0.1963 * rsq) - 0.9817) * r + (M_PI / 4.0);
+..\utils.c(323): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle = ((0.1963 * rsq) - 0.9817) * r + (3.0 * M_PI / 4.0);
+..\utils.c(323): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle = ((0.1963 * rsq) - 0.9817) * r + (3.0 * M_PI / 4.0);
+..\utils.c(326): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(angle);
+..\utils.c(355): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (mag < 1e-10) {
+..\utils.c(387): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle += 2.0 * M_PI;
+..\utils.c(391): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle -= 2.0 * M_PI;
+..\utils.c(395): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (angle < 0.0) {
+..\utils.c(396): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*sin = 1.27323954 * angle + 0.405284735 * angle * angle;
+..\utils.c(396): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*sin = 1.27323954 * angle + 0.405284735 * angle * angle;
+..\utils.c(398): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*sin = 1.27323954 * angle - 0.405284735 * angle * angle;
+..\utils.c(398): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*sin = 1.27323954 * angle - 0.405284735 * angle * angle;
+..\utils.c(402): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	angle += 0.5 * M_PI;
+..\utils.c(405): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle -= 2.0 * M_PI;
+..\utils.c(408): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (angle < 0.0) {
+..\utils.c(409): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*cos = 1.27323954 * angle + 0.405284735 * angle * angle;
+..\utils.c(409): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*cos = 1.27323954 * angle + 0.405284735 * angle * angle;
+..\utils.c(411): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*cos = 1.27323954 * angle - 0.405284735 * angle * angle;
+..\utils.c(411): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*cos = 1.27323954 * angle - 0.405284735 * angle * angle;
+..\utils.c(433): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle += 2.0 * M_PI;
+..\utils.c(437): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle -= 2.0 * M_PI;
+..\utils.c(441): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (angle < 0.0) {
+..\utils.c(442): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*sin = 1.27323954 * angle + 0.405284735 * angle * angle;
+..\utils.c(442): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*sin = 1.27323954 * angle + 0.405284735 * angle * angle;
+..\utils.c(444): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (*sin < 0.0) {
+..\utils.c(445): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			*sin = 0.225 * (*sin * -*sin - *sin) + *sin;
+..\utils.c(447): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			*sin = 0.225 * (*sin * *sin - *sin) + *sin;
+..\utils.c(450): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*sin = 1.27323954 * angle - 0.405284735 * angle * angle;
+..\utils.c(450): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*sin = 1.27323954 * angle - 0.405284735 * angle * angle;
+..\utils.c(452): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (*sin < 0.0) {
+..\utils.c(453): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			*sin = 0.225 * (*sin * -*sin - *sin) + *sin;
+..\utils.c(455): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			*sin = 0.225 * (*sin * *sin - *sin) + *sin;
+..\utils.c(460): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	angle += 0.5 * M_PI;
+..\utils.c(462): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle -= 2.0 * M_PI;
+..\utils.c(465): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (angle < 0.0) {
+..\utils.c(466): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*cos = 1.27323954 * angle + 0.405284735 * angle * angle;
+..\utils.c(466): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*cos = 1.27323954 * angle + 0.405284735 * angle * angle;
+..\utils.c(468): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (*cos < 0.0) {
+..\utils.c(469): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			*cos = 0.225 * (*cos * -*cos - *cos) + *cos;
+..\utils.c(471): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			*cos = 0.225 * (*cos * *cos - *cos) + *cos;
+..\utils.c(474): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*cos = 1.27323954 * angle - 0.405284735 * angle * angle;
+..\utils.c(474): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*cos = 1.27323954 * angle - 0.405284735 * angle * angle;
+..\utils.c(476): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (*cos < 0.0) {
+..\utils.c(477): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			*cos = 0.225 * (*cos * -*cos - *cos) + *cos;
+..\utils.c(479): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			*cos = 0.225 * (*cos * *cos - *cos) + *cos;
+..\utils.c(555): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (val > 1.0) {
+..\utils.c(562): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (val >= 0.0) {
+..\utils.c(571): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (curve >= 0.0) {
+..\utils.c(572): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			ret = 1.0 - powf(1.0 - val_a, 1.0 + curve);
+..\utils.c(572): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			ret = 1.0 - powf(1.0 - val_a, 1.0 + curve);
+..\utils.c(572): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			ret = 1.0 - powf(1.0 - val_a, 1.0 + curve);
+..\utils.c(574): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			ret = powf(val_a, 1.0 - curve);
+..\utils.c(577): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (fabsf(curve) < 1e-10) {
+..\utils.c(580): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (curve >= 0.0) {
+..\utils.c(581): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				ret = 1.0 - ((expf(curve * (1.0 - val_a)) - 1.0) / (expf(curve) - 1.0));
+..\utils.c(581): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				ret = 1.0 - ((expf(curve * (1.0 - val_a)) - 1.0) / (expf(curve) - 1.0));
+..\utils.c(581): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				ret = 1.0 - ((expf(curve * (1.0 - val_a)) - 1.0) / (expf(curve) - 1.0));
+..\utils.c(583): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				ret = (expf(-curve * val_a) - 1.0) / (expf(-curve) - 1.0);
+..\utils.c(583): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				ret = (expf(-curve * val_a) - 1.0) / (expf(-curve) - 1.0);
+..\utils.c(587): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (curve >= 0.0) {
+..\utils.c(588): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			ret = 1.0 - ((1.0 - val_a) / (1.0 + curve * val_a));
+..\utils.c(588): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			ret = 1.0 - ((1.0 - val_a) / (1.0 + curve * val_a));
+..\utils.c(590): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			ret = val_a / (1.0 - curve * (1.0 - val_a));
+..\utils.c(596): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (val < 0.0) {
+..\utils.c(656): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*real /= 32.0;
+..\utils.c(666): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*real /= 32.0;
+..\utils.c(667): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*imag /= 32.0;
+..\utils.c(677): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*real /= 32.0;
+..\utils.c(678): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*imag /= 32.0;
+..\utils.c(689): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*real /= 16.0;
+..\utils.c(699): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*real /= 16.0;
+..\utils.c(700): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*imag /= 16.0;
+..\utils.c(710): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*real /= 16.0;
+..\utils.c(711): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*imag /= 16.0;
+..\utils.c(722): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*real /= 8.0;
+..\utils.c(732): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*real /= 8.0;
+..\utils.c(733): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*imag /= 8.0;
+..\utils.c(743): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*real /= 8.0;
+..\utils.c(744): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*imag /= 8.0;
+..\utils.c(833): warning:  #111-D: statement is unreachable
+  	case HW_TYPE_VESC: return "HW_TYPE_VESC"; break;
+..\utils.c(834): warning:  #111-D: statement is unreachable
+  	case HW_TYPE_VESC_BMS: return "HW_TYPE_VESC_BMS"; break;
+..\utils.c(835): warning:  #111-D: statement is unreachable
+  	case HW_TYPE_CUSTOM_MODULE: return "HW_TYPE_CUSTOM_MODULE"; break;
+..\utils.c(836): warning:  #111-D: statement is unreachable
+  	default: return "FAULT_HARDWARE"; break;
+..\utils.c: 97 warnings, 0 errors
+compiling shutdown.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\shutdown.c(127): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (gate_disable_time > 2.0) {
+..\shutdown.c: 3 warnings, 0 errors
+compiling mempools.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\mempools.c: 1 warning, 0 errors
+compiling timer.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\timer.c: 2 warnings, 0 errors
+compiling mcpwm.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\mcpwm.c(557): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(*phase_var);
+..\mcpwm.c(560): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(*speed_var);
+..\mcpwm.c(650): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		set_duty_cycle_hl(SIGN(current) * conf->l_min_duty);
+..\mcpwm.c(683): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (fabsf(dutycycle_now) > 0.1) {
+..\mcpwm.c(736): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		return RADPS2RPM_f(m_pll_speed);
+..\mcpwm.c(806): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return dutycycle_now > 0.0 ? retval : -retval;
+..\mcpwm.c(818): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return dutycycle_now > 0.0 ? retval : -retval;
+..\mcpwm.c(991): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				dutycycle_now = SIGN(dutyCycle) * conf->l_min_duty;
+..\mcpwm.c(999): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (fabsf(dutycycle_now) > 0.1) {
+..\mcpwm.c(1063): warning:  #111-D: statement is unreachable
+  			break;
+..\mcpwm.c(1128): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			switching_frequency_now = (float)conf->m_bldc_f_sw_min * (1.0 - fabsf(dutyCycle)) +
+..\mcpwm.c(1136): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		timer_tmp.duty = (uint16_t) (((float) timer_tmp.top / 2.0) * dutyCycle
+..\mcpwm.c(1137): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				+ ((float) timer_tmp.top / 2.0));
+..\mcpwm.c(1177): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	i_term += error * (conf->s_pid_ki * MCPWM_PID_TIME_K) * (1.0 / 20.0);
+..\mcpwm.c(1178): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	d_term = (error - prev_error) * (conf->s_pid_kd / MCPWM_PID_TIME_K) * (1.0 / 20.0);
+..\mcpwm.c(1197): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (rpm > 0.0 && output < 0.0) {
+..\mcpwm.c(1197): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (rpm > 0.0 && output < 0.0) {
+..\mcpwm.c(1201): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (rpm < 0.0 && output > 0.0) {
+..\mcpwm.c(1201): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (rpm < 0.0 && output > 0.0) {
+..\mcpwm.c(1209): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		set_duty_cycle_hl(SIGN(output) * conf->l_min_duty);
+..\mcpwm.c(1310): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			rpm_now = (comms * 60.0) / (time_at_comm * 6.0);
+..\mcpwm.c(1310): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			rpm_now = (comms * 60.0) / (time_at_comm * 6.0);
+..\mcpwm.c(1313): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			float rpm_tmp = 60.0 / (timer_seconds_elapsed_since(rpm_timer_start) * 6.0);
+..\mcpwm.c(1322): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_LP_FAST(rpm_filtered, rpm_now, 0.1);
+..\mcpwm.c(1336): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (rpm_dep.cycle_int_limit_running < 1.0) {
+..\mcpwm.c(1344): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		rpm_dep.comm_time_sum = conf->m_bldc_f_sw_max / ((rpm_abs / 60.0) * 6.0);
+..\mcpwm.c(1345): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		rpm_dep.comm_time_sum_min_rpm = conf->m_bldc_f_sw_max / ((conf->sl_min_erpm / 60.0) * 6.0);
+..\mcpwm.c(1405): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if ((max_s - min_s) / ((max_s + min_s) / 2.0) > 1.2) {
+..\mcpwm.c(1605): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			curr_tot_sample = sqrtf((c0*c0 + c1*c1 + c2*c2) / 1.5);
+..\mcpwm.c(1734): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(last_current_sample) > (conf->l_abs_current_max * 1.2)) {
+..\mcpwm.c(1735): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		last_current_sample = SIGN(last_current_sample) * conf->l_abs_current_max * 1.2;
+..\mcpwm.c(1777): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (has_commutated && fabsf(dutycycle_now) > 0.2) {
+..\mcpwm.c(1880): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					int min = (int)((1.0 - fabsf(dutycycle_now)) * (float)ADC_Value[ADC_IND_VIN_SENS] * 0.3);
+..\mcpwm.c(1885): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if (pwm_cycles_sum > (last_pwm_cycles_sum / 2.0) ||
+..\mcpwm.c(1911): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  								conf->sl_cycle_int_rpm_br, rpm_dep.comm_time_sum / 2.0,
+..\mcpwm.c(1912): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  								(rpm_dep.comm_time_sum / 2.0) * conf->sl_phase_advance_at_br)) {
+..\mcpwm.c(1915): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  							cycle_integrator_iterations += 1.0;
+..\mcpwm.c(1970): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		const float voltage_scale = 20.0 / input_voltage;
+..\mcpwm.c(1971): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float ramp_step = conf->m_duty_ramp_step / (switching_frequency_now / 1000.0);
+..\mcpwm.c(1976): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			ramp_step *= 0.1;
+..\mcpwm.c(1997): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			step /= switching_frequency_now / 1000.0;
+..\mcpwm.c(2001): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				step *= 0.1;
+..\mcpwm.c(2007): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  						current_set > 0.0 ?
+..\mcpwm.c(2019): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (dutycycle_now_tmp < 0.0 && current_set > 0.0) {
+..\mcpwm.c(2019): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (dutycycle_now_tmp < 0.0 && current_set > 0.0) {
+..\mcpwm.c(2021): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				} else if (dutycycle_now_tmp > 0.0 && current_set < 0.0) {
+..\mcpwm.c(2021): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				} else if (dutycycle_now_tmp > 0.0 && current_set < 0.0) {
+..\mcpwm.c(2028): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			dutycycle_set = dutycycle_now_tmp >= 0.0 ? conf->l_min_duty : -conf->l_min_duty;
+..\mcpwm.c(2038): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			step /= switching_frequency_now / 1000.0;
+..\mcpwm.c(2042): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				step *= 0.1;
+..\mcpwm.c(2045): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			dutycycle_now_tmp += SIGN(dutycycle_now_tmp) * step;
+..\mcpwm.c(2056): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					dutycycle_now_tmp = SIGN(dutycycle_now_tmp) * conf->l_min_duty;
+..\mcpwm.c(2118): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		run_pid_control_pos(1.0 / switching_frequency_now, pos);
+..\mcpwm.c(2119): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		pll_run(-DEG2RAD_f(pos), 1.0 / switching_frequency_now, &m_pll_phase, &m_pll_speed);
+..\mcpwm.c(2119): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		pll_run(-DEG2RAD_f(pos), 1.0 / switching_frequency_now, &m_pll_phase, &m_pll_speed);
+..\mcpwm.c(2162): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float offset = (v0 + v1 + v2) / 3.0;
+..\mcpwm.c(2167): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float amp = sqrtf((v0*v0 + v1*v1 + v2*v2) / 1.5);
+..\mcpwm.c(2173): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	ph[0] = RAD2DEG_f(asinf(v0));
+..\mcpwm.c: 60 warnings, 0 errors
+compiling mcpwm_foc.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\mcpwm_foc.c(637): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			while (UTILS_AGE_S(v_in_stable_time) < 2.0) {
+..\mcpwm_foc.c(641): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (fabsf(v_in_now - v_in_last) > 1.5) {
+..\mcpwm_foc.c(854): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (motor_now()->m_conf->s_pid_ramp_erpms_s > 0.0 ) {
+..\mcpwm_foc.c(977): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	motor_now()->m_openloop_speed = RPM2RADPS_f(rpm);
+..\mcpwm_foc.c(1006): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	motor_now()->m_openloop_phase = DEG2RAD_f(phase);
+..\mcpwm_foc.c(1082): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	motor_now()->m_openloop_speed = RPM2RADPS_f(rpm);
+..\mcpwm_foc.c(1102): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	motor_now()->m_openloop_phase = DEG2RAD_f(phase);
+..\mcpwm_foc.c(1148): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		return motor_now()->m_conf->foc_f_zv / 2.0;
+..\mcpwm_foc.c(1161): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		return (1.0 / motor_now()->m_conf->foc_f_zv) ;
+..\mcpwm_foc.c(1163): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		return (1.0 / (motor_now()->m_conf->foc_f_zv / 2.0));
+..\mcpwm_foc.c(1192): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return SIGN(motor->m_motor_state.vq * motor->m_motor_state.iq) * motor->m_motor_state.i_abs;
+..\mcpwm_foc.c(1197): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return SIGN(motor->m_motor_state.vq * motor->m_motor_state.iq_filter) * motor->m_motor_state.i_abs_filter;
+..\mcpwm_foc.c(1230): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return RADPS2RPM_f(motor_now()->m_motor_state.speed_rad_s);
+..\mcpwm_foc.c(1238): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return RADPS2RPM_f(motor_now()->m_speed_est_fast);
+..\mcpwm_foc.c(1245): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return RADPS2RPM_f(motor_now()->m_speed_est_faster);
+..\mcpwm_foc.c(1258): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return SIGN(motor->m_motor_state.vq * motor->m_motor_state.iq) * motor->m_motor_state.i_abs;
+..\mcpwm_foc.c(1271): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return SIGN(motor->m_motor_state.vq * motor->m_motor_state.iq_filter) * motor->m_motor_state.i_abs_filter;
+..\mcpwm_foc.c(1445): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float angle = RAD2DEG_f(motor_now()->m_motor_state.phase);
+..\mcpwm_foc.c(1457): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float angle = RAD2DEG_f(motor_now()->m_phase_now_observer);
+..\mcpwm_foc.c(1469): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float angle = RAD2DEG_f(motor_now()->m_phase_now_encoder);
+..\mcpwm_foc.c(1538): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		for (float i = 0.0;i < 2.0 * M_PI;i += (2.0 * M_PI) / 500.0) {
+..\mcpwm_foc.c(1538): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		for (float i = 0.0;i < 2.0 * M_PI;i += (2.0 * M_PI) / 500.0) {
+..\mcpwm_foc.c(1555): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	for (float i = 0.0;i < 2.0 * M_PI;i += (2.0 * M_PI) / 500.0) {
+..\mcpwm_foc.c(1555): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	for (float i = 0.0;i < 2.0 * M_PI;i += (2.0 * M_PI) / 500.0) {
+..\mcpwm_foc.c(1576): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				j += (2.0 * M_PI) / 500.0) {
+..\mcpwm_foc.c(1585): warning:  #223-D: function "sincosf" declared implicitly
+  		sincosf(diff, &s, &c);
+..\mcpwm_foc.c(1590): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			commands_printf("%.2f", (double)RAD2DEG_f(diff));
+..\mcpwm_foc.c(1593): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (i > 3 && fabsf(utils_angle_difference_rad(motor->m_phase_now_encoder, first)) < fabsf(diff / 2.0)) {
+..\mcpwm_foc.c(1604): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				j -= (2.0 * M_PI) / 500.0) {
+..\mcpwm_foc.c(1613): warning:  #223-D: function "sincosf" declared implicitly
+  		sincosf(diff, &s, &c);
+..\mcpwm_foc.c(1618): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			commands_printf("%.2f", (double)RAD2DEG_f(diff));
+..\mcpwm_foc.c(1621): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (i > 3 && fabsf(utils_angle_difference_rad(motor->m_phase_now_encoder, first)) < fabsf(diff / 2.0)) {
+..\mcpwm_foc.c(1626): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float diff = RAD2DEG_f(atan2f(s_sum, c_sum));
+..\mcpwm_foc.c(1627): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*inverted = diff < 0.0;
+..\mcpwm_foc.c(1638): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	for (float i = motor->m_phase_now_override;i < 2.0 * M_PI;i += (2.0 * M_PI) / 500.0) {
+..\mcpwm_foc.c(1638): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	for (float i = motor->m_phase_now_override;i < 2.0 * M_PI;i += (2.0 * M_PI) / 500.0) {
+..\mcpwm_foc.c(1648): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	const int it_ofs = motor->m_conf->foc_encoder_ratio * 3.0;
+..\mcpwm_foc.c(1653): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float step = (2.0 * M_PI * motor->m_conf->foc_encoder_ratio) / ((float)it_ofs);
+..\mcpwm_foc.c(1657): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			utils_step_towards((float*)&motor->m_phase_now_override, override, step / 100.0);
+..\mcpwm_foc.c(1665): warning:  #223-D: function "sincosf" declared implicitly
+  		sincosf(angle_diff, &s, &c);
+..\mcpwm_foc.c(1670): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			commands_printf("%.2f", (double)RAD2DEG_f(angle_diff));
+..\mcpwm_foc.c(1675): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float step = (2.0 * M_PI * motor->m_conf->foc_encoder_ratio) / ((float)it_ofs);
+..\mcpwm_foc.c(1679): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			utils_step_towards((float*)&motor->m_phase_now_override, override, step / 100.0);
+..\mcpwm_foc.c(1687): warning:  #223-D: function "sincosf" declared implicitly
+  		sincosf(angle_diff, &s, &c);
+..\mcpwm_foc.c(1692): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			commands_printf("%.2f", (double)RAD2DEG_f(angle_diff));
+..\mcpwm_foc.c(1696): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*offset = RAD2DEG_f(atan2f(s_sum, c_sum));
+..\mcpwm_foc.c(1765): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	while (fabsf(motor->m_iq_set - current) > 0.001) {
+..\mcpwm_foc.c(1766): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		utils_step_towards((float*)&motor->m_iq_set, current, fabsf(current) / 500.0);
+..\mcpwm_foc.c(1864): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (motor->m_conf->foc_f_zv > 30.0e3) {
+..\mcpwm_foc.c(1935): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		ld_lq_diff_sum += 4.0 * sqrtf(SQ(real_bin2) + SQ(imag_bin2));
+..\mcpwm_foc.c(1968): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*ld_lq_diff = (ld_lq_diff_sum / iterations) * 1e6 * ind_scale_factor;
+..\mcpwm_foc.c(1971): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return (l_sum / iterations) * 1e6 * ind_scale_factor;
+..\mcpwm_foc.c(1993): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	for (float i = 0.02;i < 0.5;i *= 1.5) {
+..\mcpwm_foc.c(1993): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	for (float i = 0.02;i < 0.5;i *= 1.5) {
+..\mcpwm_foc.c(2034): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	for (float i = 2.0;i < (motor->m_conf->l_current_max / 2.0);i *= 1.5) {
+..\mcpwm_foc.c(2034): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	for (float i = 2.0;i < (motor->m_conf->l_current_max / 2.0);i *= 1.5) {
+..\mcpwm_foc.c(2035): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (i > (1.0 / mcpwm_foc_measure_resistance(i, 20, false))) {
+..\mcpwm_foc.c(2041): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (i_last < 0.01) {
+..\mcpwm_foc.c(2042): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		i_last = (motor->m_conf->l_current_max / 2.0);
+..\mcpwm_foc.c(2101): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		motor->m_id_set = (float)i * current / 1000.0;
+..\mcpwm_foc.c(2115): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			motor->m_phase_now_override = DEG2RAD_f(j);
+..\mcpwm_foc.c(2120): warning:  #223-D: function "sincosf" declared implicitly
+  			sincosf(motor->m_phase_now_override, &s, &c);
+..\mcpwm_foc.c(2130): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			motor->m_phase_now_override = DEG2RAD_f(j);
+..\mcpwm_foc.c(2135): warning:  #223-D: function "sincosf" declared implicitly
+  			sincosf(motor->m_phase_now_override, &s, &c);
+..\mcpwm_foc.c(2157): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			float ang = RAD2DEG_f(atan2f(sin_hall[i], cos_hall[i]));
+..\mcpwm_foc.c(2159): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			hall_table[i] = (uint8_t)(ang * 200.0 / 360.0);
+..\mcpwm_foc.c(2239): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		voltage_sum[0] += ADC_VOLTS(ADC_IND_SENS1);
+..\mcpwm_foc.c(2268): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		voltage_sum[1] += ADC_VOLTS(ADC_IND_SENS2);
+..\mcpwm_foc.c(2297): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		voltage_sum[2] += ADC_VOLTS(ADC_IND_SENS3);
+..\mcpwm_foc.c(2314): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float v_avg = (voltage_sum[0] + voltage_sum[1] + voltage_sum[2]) / 3.0;
+..\mcpwm_foc.c(2348): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			v_avg = (ADC_VOLTS(ADC_IND_SENS1) + ADC_VOLTS(ADC_IND_SENS2) + ADC_VOLTS(ADC_IND_SENS3)) / 3.0;
+..\mcpwm_foc.c(2348): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			v_avg = (ADC_VOLTS(ADC_IND_SENS1) + ADC_VOLTS(ADC_IND_SENS2) + ADC_VOLTS(ADC_IND_SENS3)) / 3.0;
+..\mcpwm_foc.c(2348): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			v_avg = (ADC_VOLTS(ADC_IND_SENS1) + ADC_VOLTS(ADC_IND_SENS2) + ADC_VOLTS(ADC_IND_SENS3)) / 3.0;
+..\mcpwm_foc.c(2349): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			voltage_sum[0] += ADC_VOLTS(ADC_IND_SENS1) - v_avg;
+..\mcpwm_foc.c(2350): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			voltage_sum[1] += ADC_VOLTS(ADC_IND_SENS2) - v_avg;
+..\mcpwm_foc.c(2351): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			voltage_sum[2] += ADC_VOLTS(ADC_IND_SENS3) - v_avg;
+..\mcpwm_foc.c(2633): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		dt = 1.0 / conf_now->foc_f_zv;
+..\mcpwm_foc.c(2635): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		dt = 1.0 / (conf_now->foc_f_zv / 2.0);
+..\mcpwm_foc.c(2666): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			phase_tmp = 360.0 - phase_tmp;
+..\mcpwm_foc.c(2671): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		motor_now->m_phase_now_encoder = DEG2RAD_f(phase_tmp);
+..\mcpwm_foc.c(2677): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		motor_now->m_motor_state.i_beta = ONE_BY_SQRT3 * ia + TWO_BY_SQRT3 * ib;
+..\mcpwm_foc.c(2677): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		motor_now->m_motor_state.i_beta = ONE_BY_SQRT3 * ia + TWO_BY_SQRT3 * ib;
+..\mcpwm_foc.c(2692): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_LP_FAST(motor_now->m_duty_abs_filtered, duty_abs, 0.01);
+..\mcpwm_foc.c(2695): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_LP_FAST(motor_now->m_duty_filtered, duty_now, 0.01);
+..\mcpwm_foc.c(2709): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if ((SIGN(speed_fast_now) != SIGN(motor_now->m_br_speed_before) ||
+..\mcpwm_foc.c(2709): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if ((SIGN(speed_fast_now) != SIGN(motor_now->m_br_speed_before) ||
+..\mcpwm_foc.c(2710): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					SIGN(vq_now) != SIGN(motor_now->m_br_vq_before) ||
+..\mcpwm_foc.c(2710): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					SIGN(vq_now) != SIGN(motor_now->m_br_vq_before) ||
+..\mcpwm_foc.c(2711): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					fabsf(motor_now->m_duty_filtered) < 0.001 || motor_now->m_br_no_duty_samples < 10) &&
+..\mcpwm_foc.c(2752): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (fabsf(duty_set) < (duty_abs - 0.05) ||
+..\mcpwm_foc.c(2753): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					(SIGN(motor_now->m_motor_state.vq) * motor_now->m_motor_state.iq) < conf_now->lo_current_min) {
+..\mcpwm_foc.c(2757): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				float scale = 1.0 / motor_now->m_motor_state.v_bus;
+..\mcpwm_foc.c(2778): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (duty_set > 0.0) {
+..\mcpwm_foc.c(2786): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			iq_set_tmp = -SIGN(speed_fast_now) * fabsf(iq_set_tmp);
+..\mcpwm_foc.c(2798): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				motor_now->m_phase_now_observer += motor_now->m_pll_speed * dt * (0.5 + conf_now->foc_observer_offset);
+..\mcpwm_foc.c(2860): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (fabsf(RADPS2RPM_f(motor_now->m_speed_est_fast)) > conf_now->foc_sl_erpm_hfi) {
+..\mcpwm_foc.c(2907): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (conf_now->foc_mtpa_mode != MTPA_MODE_OFF && ld_lq_diff != 0.0) {
+..\mcpwm_foc.c(2915): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			id_set_tmp = (lambda - sqrtf(SQ(lambda) + 8.0 * SQ(ld_lq_diff) * SQ(iq_ref))) / (4.0 * ld_lq_diff);
+..\mcpwm_foc.c(2915): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			id_set_tmp = (lambda - sqrtf(SQ(lambda) + 8.0 * SQ(ld_lq_diff) * SQ(iq_ref))) / (4.0 * ld_lq_diff);
+..\mcpwm_foc.c(2916): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			iq_set_tmp = SIGN(iq_set_tmp) * sqrtf(SQ(iq_set_tmp) - SQ(id_set_tmp));
+..\mcpwm_foc.c(2924): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		iq_set_tmp -= SIGN(mod_q) * motor_now->m_i_fw_set * conf_now->foc_fw_q_current_factor;
+..\mcpwm_foc.c(2928): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (mod_q > 0.001) {
+..\mcpwm_foc.c(2934): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (mod_q > 0.0) {
+..\mcpwm_foc.c(3005): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (fabsf(RADPS2RPM_f(motor_now->m_pll_speed)) < (conf_now->foc_sl_erpm_hfi * 1.1)) {
+..\mcpwm_foc.c(3005): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (fabsf(RADPS2RPM_f(motor_now->m_pll_speed)) < (conf_now->foc_sl_erpm_hfi * 1.1)) {
+..\mcpwm_foc.c(3033): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_NAN_ZERO(motor_now->m_motor_state.vd);
+..\mcpwm_foc.c(3034): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_NAN_ZERO(motor_now->m_motor_state.vq);
+..\mcpwm_foc.c(3036): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_LP_FAST(motor_now->m_motor_state.vd, vd_tmp, 0.2);
+..\mcpwm_foc.c(3037): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_LP_FAST(motor_now->m_motor_state.vq, vq_tmp, 0.2);
+..\mcpwm_foc.c(3052): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		const float voltage_normalize = 1.5 / motor_now->m_motor_state.v_bus;
+..\mcpwm_foc.c(3056): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_NAN_ZERO(motor_now->m_motor_state.mod_q_filter);
+..\mcpwm_foc.c(3057): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_LP_FAST(motor_now->m_motor_state.mod_q_filter, motor_now->m_motor_state.mod_q, 0.2);
+..\mcpwm_foc.c(3062): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	motor_now->m_motor_state.duty_now = SIGN(motor_now->m_motor_state.vq) *
+..\mcpwm_foc.c(3072): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		utils_truncate_number(&diff, -M_PI / 3.0, M_PI / 3.0);
+..\mcpwm_foc.c(3072): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		utils_truncate_number(&diff, -M_PI / 3.0, M_PI / 3.0);
+..\mcpwm_foc.c(3074): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_LP_FAST(motor_now->m_speed_est_fast, diff / dt, 0.01);
+..\mcpwm_foc.c(3075): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_NAN_ZERO(motor_now->m_speed_est_fast);
+..\mcpwm_foc.c(3077): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_LP_FAST(motor_now->m_speed_est_faster, diff / dt, 0.2);
+..\mcpwm_foc.c(3078): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_NAN_ZERO(motor_now->m_speed_est_faster);
+..\mcpwm_foc.c(3081): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		utils_truncate_number_abs((float*)&motor_now->m_pll_speed, fabsf(motor_now->m_speed_est_fast) * 3.0);
+..\mcpwm_foc.c(3089): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	int step = (int)floorf((ph_tmp + M_PI) / (2.0 * M_PI) * 6.0);
+..\mcpwm_foc.c(3112): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle_now = RAD2DEG_f(motor_now->m_motor_state.phase);
+..\mcpwm_foc.c(3117): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (conf_now->p_pid_ang_div > 0.98 && conf_now->p_pid_ang_div < 1.02) {
+..\mcpwm_foc.c(3117): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (conf_now->p_pid_ang_div > 0.98 && conf_now->p_pid_ang_div < 1.02) {
+..\mcpwm_foc.c(3120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (angle_now < 90.0 && motor_now->m_pid_div_angle_last > 270.0) {
+..\mcpwm_foc.c(3120): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (angle_now < 90.0 && motor_now->m_pid_div_angle_last > 270.0) {
+..\mcpwm_foc.c(3121): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			motor_now->m_pid_div_angle_accumulator += 360.0 / conf_now->p_pid_ang_div;
+..\mcpwm_foc.c(3123): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		} else if (angle_now > 270.0 && motor_now->m_pid_div_angle_last < 90.0) {
+..\mcpwm_foc.c(3123): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		} else if (angle_now > 270.0 && motor_now->m_pid_div_angle_last < 90.0) {
+..\mcpwm_foc.c(3124): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			motor_now->m_pid_div_angle_accumulator -= 360.0 / conf_now->p_pid_ang_div;
+..\mcpwm_foc.c(3168): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (motor->m_conf->foc_fw_duty_start < 0.99 &&
+..\mcpwm_foc.c(3209): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (min_current < 0.001 && motor_now()->m_motor_released) {
+..\mcpwm_foc.c(3312): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (motor->m_motor_state.duty_now > 0.0) {
+..\mcpwm_foc.c(3313): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		add_min_speed = RPM2RADPS_f(openloop_rpm) * dt;
+..\mcpwm_foc.c(3315): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		add_min_speed = -RPM2RADPS_f(openloop_rpm) * dt;
+..\mcpwm_foc.c(3322): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(motor->m_pll_speed) < RPM2RADPS_f(openloop_rpm_max) &&
+..\mcpwm_foc.c(3325): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	} else if (motor->m_min_rpm_hyst_timer > 0.0) {
+..\mcpwm_foc.c(3331): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			(motor->m_state == MC_STATE_RUNNING && fabsf(motor->m_motor_state.duty_now) < 0.001)) {
+..\mcpwm_foc.c(3339): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			motor->m_min_rpm_timer <= 0.0001) {
+..\mcpwm_foc.c(3348): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (motor->m_min_rpm_timer > 0.0) {
+..\mcpwm_foc.c(3354): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (motor->m_motor_state.duty_now > 0.0) {
+..\mcpwm_foc.c(3355): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				motor->m_phase_now_observer_override += M_PI / 3.0;
+..\mcpwm_foc.c(3357): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				motor->m_phase_now_observer_override -= M_PI / 3.0;
+..\mcpwm_foc.c(3368): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		utils_fast_sincos_better(motor->m_phase_now_observer_override + SIGN(motor->m_motor_state.duty_now) * M_PI / 4.0, &s, &c);
+..\mcpwm_foc.c(3390): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\mcpwm_foc.c(3397): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	motor->m_gamma_now = gamma_tmp * 4.0;
+..\mcpwm_foc.c(3405): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		motor->m_r_est = motor->m_r_est_state - 0.5 * res_est_gain * motor->m_conf->foc_motor_l * i_abs_sq;
+..\mcpwm_foc.c(3411): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		utils_truncate_number((float*)&motor->m_r_est_state, motor->m_conf->foc_motor_r * 0.25, motor->m_conf->foc_motor_r * 3.0);
+..\mcpwm_foc.c(3411): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		utils_truncate_number((float*)&motor->m_r_est_state, motor->m_conf->foc_motor_r * 0.25, motor->m_conf->foc_motor_r * 3.0);
+..\mcpwm_foc.c(3424): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (seconds > 0.0) {
+..\mcpwm_foc.c(3439): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float t_est = (res_est / res_base - 1) / 0.00386 + t_base;
+..\mcpwm_foc.c(3444): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			commands_send_plot_points((float)i / 2.0, t_meas);
+..\mcpwm_foc.c(3446): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			commands_send_plot_points((float)i / 2.0, t_est);
+..\mcpwm_foc.c(3451): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				(double)(res_base * 1000.0), (double)(res_est * 1000.0));
+..\mcpwm_foc.c(3451): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				(double)(res_base * 1000.0), (double)(res_est * 1000.0));
+..\mcpwm_foc.c(3500): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float rpm_abs = fabsf(RADPS2RPM_f(motor->m_speed_est_fast));
+..\mcpwm_foc.c(3514): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle_bin_1 += M_PI / 1.7; // Why 1.7??
+..\mcpwm_foc.c(3518): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float angle_bin_2 = -utils_fast_atan2(imag_bin2, real_bin2) / 2.0;
+..\mcpwm_foc.c(3524): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			dt_sw = 1.0 / motor->m_conf->foc_f_zv;
+..\mcpwm_foc.c(3526): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			dt_sw = 1.0 / (motor->m_conf->foc_f_zv / 2.0);
+..\mcpwm_foc.c(3528): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		angle_bin_2 += motor->m_motor_state.speed_rad_s * ((float)motor->m_hfi.samples / 2.0) * dt_sw;
+..\mcpwm_foc.c(3538): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (fabsf(utils_angle_difference_rad(angle_bin_2, angle_bin_1)) > (M_PI / 2.0)) {
+..\mcpwm_foc.c(3582): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				commands_send_plot_points(motor->m_hfi_plot_sample, 2.0 * mag_bin_2 * 1e6);
+..\mcpwm_foc.c(3585): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				commands_send_plot_points(motor->m_hfi_plot_sample, 2.0 * mag_bin_1 * 1e6);
+..\mcpwm_foc.c(3588): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				commands_send_plot_points(motor->m_hfi_plot_sample, real_bin0 * 1e6);
+..\mcpwm_foc.c(3613): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				commands_send_plot_points(motor->m_hfi_plot_sample, motor->m_hfi.buffer[(int)motor->m_hfi_plot_sample] * 1e6);
+..\mcpwm_foc.c(3698): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		R += R * 0.00386 * (t - conf_now->foc_temp_comp_base_temp);
+..\mcpwm_foc.c(3706): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(id) > 0.1 || fabsf(iq) > 0.1) {
+..\mcpwm_foc.c(3706): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (fabsf(id) > 0.1 || fabsf(iq) > 0.1) {
+..\mcpwm_foc.c(3707): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		L = L - ld_lq_diff / 2.0 + ld_lq_diff * SQ(iq) / (SQ(id) + SQ(iq));
+..\mcpwm_foc.c(3715): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	const float gamma_half = motor->m_gamma_now * 0.5;
+..\mcpwm_foc.c(3726): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (err > 0.0) {
+..\mcpwm_foc.c(3741): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(*x1);
+..\mcpwm_foc.c(3742): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(*x2);
+..\mcpwm_foc.c(3746): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (mag < (conf_now->foc_motor_flux_linkage * 0.5)) {
+..\mcpwm_foc.c(3747): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*x1 *= 1.1;
+..\mcpwm_foc.c(3748): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*x2 *= 1.1;
+..\mcpwm_foc.c(3758): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(*phase_var);
+..\mcpwm_foc.c(3761): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(*speed_var);
+..\mcpwm_foc.c(3811): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float abs_rpm = fabsf(RADPS2RPM_f(motor->m_speed_est_fast));
+..\mcpwm_foc.c(3842): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (conf_now->foc_d_gain_scale_start < 0.99) {
+..\mcpwm_foc.c(3844): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (max_duty < 0.01) {
+..\mcpwm_foc.c(3866): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		ki += ki * 0.00386 * (t - conf_now->foc_temp_comp_base_temp);
+..\mcpwm_foc.c(3882): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float lq = conf_now->foc_motor_l + conf_now->foc_motor_ld_lq_diff * 0.5;
+..\mcpwm_foc.c(3883): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float ld = conf_now->foc_motor_l - conf_now->foc_motor_ld_lq_diff * 0.5;
+..\mcpwm_foc.c(3911): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float max_v_mag = ONE_BY_SQRT3 * max_duty * state_m->v_bus;
+..\mcpwm_foc.c(3930): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	const float voltage_normalize = 1.5 / state_m->v_bus;
+..\mcpwm_foc.c(3933): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(state_m->mod_q_filter);
+..\mcpwm_foc.c(3934): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_LP_FAST(state_m->mod_q_filter, state_m->mod_q, 0.2);
+..\mcpwm_foc.c(3972): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		utils_truncate_number_abs(&hfi_voltage, state_m->v_bus * (1.0 - fabsf(state_m->duty_now)) * SQRT3_BY_2 * (2.0 / 3.0) * 0.95);
+..\mcpwm_foc.c(3981): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (di > 0.01) {
+..\mcpwm_foc.c(4087): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Va = (ADC_VOLTS(ADC_IND_SENS1) - ofs_volt[0]) * ((VIN_R1 + VIN_R2) / VIN_R2) * ADC_VOLTS_PH_FACTOR;
+..\mcpwm_foc.c(4088): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Vb = (ADC_VOLTS(ADC_IND_SENS2) - ofs_volt[1]) * ((VIN_R1 + VIN_R2) / VIN_R2) * ADC_VOLTS_PH_FACTOR;
+..\mcpwm_foc.c(4089): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	Vc = (ADC_VOLTS(ADC_IND_SENS3) - ofs_volt[2]) * ((VIN_R1 + VIN_R2) / VIN_R2) * ADC_VOLTS_PH_FACTOR;
+..\mcpwm_foc.c(4103): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	const float ib_filter = -0.5 * i_alpha_filter + SQRT3_BY_2 * i_beta_filter;
+..\mcpwm_foc.c(4104): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	const float ic_filter = -0.5 * i_alpha_filter - SQRT3_BY_2 * i_beta_filter;
+..\mcpwm_foc.c(4108): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	const float mod_alpha_filter_sgn = (1.0 / 3.0) * (2.0 * SIGN(ia_filter) - SIGN(ib_filter) - SIGN(ic_filter));
+..\mcpwm_foc.c(4108): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	const float mod_alpha_filter_sgn = (1.0 / 3.0) * (2.0 * SIGN(ia_filter) - SIGN(ib_filter) - SIGN(ic_filter));
+..\mcpwm_foc.c(4108): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	const float mod_alpha_filter_sgn = (1.0 / 3.0) * (2.0 * SIGN(ia_filter) - SIGN(ib_filter) - SIGN(ic_filter));
+..\mcpwm_foc.c(4109): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	const float mod_beta_filter_sgn = ONE_BY_SQRT3 * (SIGN(ib_filter) - SIGN(ic_filter));
+..\mcpwm_foc.c(4109): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	const float mod_beta_filter_sgn = ONE_BY_SQRT3 * (SIGN(ib_filter) - SIGN(ic_filter));
+..\mcpwm_foc.c(4111): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	const float mod_comp_fact = conf_now->foc_dt_us * 1e-6 * conf_now->foc_f_zv;
+..\mcpwm_foc.c(4126): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float v_alpha = (1.0 / 3.0) * (2.0 * Va - Vb - Vc);
+..\mcpwm_foc.c(4127): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float v_beta = ONE_BY_SQRT3 * (Vb - Vc);
+..\mcpwm_foc.c(4133): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		const float voltage_normalize = 1.5 / state_m->v_bus;
+..\mcpwm_foc.c(4139): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float abs_rpm = fabsf(RADPS2RPM_f(motor->m_pll_speed));
+..\mcpwm_foc.c(4142): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (abs_rpm < 10000.0) {
+..\mcpwm_foc.c(4149): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_LP_FAST(state_m->v_mag_filter, v_mag + 0.1 * v_mag * filter_const, filter_const);
+..\mcpwm_foc.c(4152): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(state_m->v_mag_filter);
+..\mcpwm_foc.c(4153): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(state_m->mod_alpha_filter);
+..\mcpwm_foc.c(4154): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	UTILS_NAN_ZERO(state_m->mod_beta_filter);
+..\mcpwm_foc.c(4165): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (mod_mag > 0.04) {
+..\mcpwm_foc.c(4219): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (ONE_BY_SQRT3 * beta > alpha) {
+..\mcpwm_foc.c(4242): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (ONE_BY_SQRT3 * beta > alpha) {
+..\mcpwm_foc.c(4258): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t1 = (alpha - ONE_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4259): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t2 = (TWO_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4272): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t2 = (alpha + ONE_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4273): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t3 = (-alpha + ONE_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4286): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t3 = (TWO_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4287): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t4 = (-alpha - ONE_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4300): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t4 = (-alpha + ONE_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4301): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t5 = (-TWO_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4314): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t5 = (-alpha - ONE_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4315): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t6 = (alpha - ONE_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4328): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t6 = (-TWO_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4329): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t t1 = (alpha + ONE_BY_SQRT3 * beta) * PWMFullDutyCycle;
+..\mcpwm_foc.c(4383): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (conf_now->p_pid_gain_dec_angle > 0.1) {
+..\mcpwm_foc.c(4431): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	utils_truncate_number_abs((float*)&motor->m_pos_i_term, 1.0 - fabsf(p_tmp));
+..\mcpwm_foc.c(4446): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			motor->m_iq_set = 0.4 * conf_now->l_current_max * conf_now->l_current_max_scale;;
+..\mcpwm_foc.c(4466): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (conf_now->s_pid_ramp_erpms_s > 0.0) {
+..\mcpwm_foc.c(4501): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (conf_now->s_pid_ki < 1e-9) {
+..\mcpwm_foc.c(4507): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (rpm > 20.0 && output < 0.0) {
+..\mcpwm_foc.c(4507): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (rpm > 20.0 && output < 0.0) {
+..\mcpwm_foc.c(4511): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (rpm < -20.0 && output > 0.0) {
+..\mcpwm_foc.c(4645): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float rpm_abs = fabsf(RADPS2RPM_f(speed));
+..\mcpwm_foc.c(4648): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float hyst = sl_erpm * 0.05;
+..\mcpwm_foc.c(4666): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float rad_per_sec = (M_PI / 3.0) / motor->m_hall_dt_diff_last;
+..\mcpwm_foc.c(4667): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float rpm_abs_fast = fabsf(RADPS2RPM_f(motor->m_speed_est_fast));
+..\mcpwm_foc.c(4668): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float rpm_abs_hall = fabsf(RADPS2RPM_f(rad_per_sec));
+..\mcpwm_foc.c(4671): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float hyst = conf_now->foc_sl_erpm * 0.1;
+..\mcpwm_foc.c(4688): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float ang_hall_now = ((float)ang_hall_int / 200.0) * 2 * M_PI;
+..\mcpwm_foc.c(4704): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (SIGN(diff) == SIGN(motor->m_hall_dt_diff_last)) {
+..\mcpwm_foc.c(4721): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			motor->m_ang_hall = ((float)ang_avg / 200.0) * 2 * M_PI;
+..\mcpwm_foc.c(4726): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (RADPS2RPM_f((M_PI / 3.0) /
+..\mcpwm_foc.c(4726): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (RADPS2RPM_f((M_PI / 3.0) /
+..\mcpwm_foc.c(4735): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (fabsf(diff) < ((2.0 * M_PI) / 12.0)) {
+..\mcpwm_foc.c(4740): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				motor->m_ang_hall -= diff / 100.0;
+..\mcpwm_foc.c(4746): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float angle_step = (fmaxf(rpm_abs_hall, conf_now->foc_hall_interp_erpm) / 60.0) * 2.0 * M_PI * dt * 1.5;
+..\mcpwm_foc.c(4751): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			motor->m_ang_hall_rate_limited += angle_step * SIGN(angle_diff);
+..\mcpwm_foc.c: 251 warnings, 0 errors
+compiling terminal.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\terminal.c(89): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		commands_printf("Latest ADC duration: %.4f ms", (double)(mcpwm_get_last_adc_isr_duration() * 1000.0));
+..\terminal.c(90): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		commands_printf("Latest injected ADC duration: %.4f ms", (double)(mc_interface_get_last_inj_adc_isr_duration() * 1000.0));
+..\terminal.c(91): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		commands_printf("Latest sample ADC duration: %.4f ms\n", (double)(mc_interface_get_last_sample_adc_isr_duration() * 1000.0));
+..\terminal.c(112): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					(double)(100.0 * (float)tp->p_time / (float)chVTGetSystemTimeX()));
+..\terminal.c(212): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (current > 0.0 && current < mc_interface_get_configuration()->l_current_max &&
+..\terminal.c(213): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					min_rpm > 10.0 && min_rpm < 3000.0 &&
+..\terminal.c(213): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					min_rpm > 10.0 && min_rpm < 3000.0 &&
+..\terminal.c(214): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					low_duty > 0.02 && low_duty < 0.8) {
+..\terminal.c(214): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					low_duty > 0.02 && low_duty < 0.8) {
+..\terminal.c(258): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < 1.0) {
+..\terminal.c(261): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				commands_printf("Age (milliseconds) : %.2f", (double)(UTILS_AGE_S(msg->rx_time) * 1000.0));
+..\terminal.c(268): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (io_adc->id >= 0 && UTILS_AGE_S(io_adc->rx_time) < 1.0) {
+..\terminal.c(272): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				commands_printf("Age (milliseconds) : %.2f", (double)(UTILS_AGE_S(io_adc->rx_time) * 1000.0));
+..\terminal.c(279): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (io_adc->id >= 0 && UTILS_AGE_S(io_adc->rx_time) < 1.0) {
+..\terminal.c(283): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				commands_printf("Age (milliseconds) : %.2f", (double)(UTILS_AGE_S(io_adc->rx_time) * 1000.0));
+..\terminal.c(290): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (io_in->id >= 0 && UTILS_AGE_S(io_in->rx_time) < 1.0) {
+..\terminal.c(294): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				commands_printf("Age (milliseconds) : %.2f", (double)(UTILS_AGE_S(io_in->rx_time) * 1000.0));
+..\terminal.c(310): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (current > 0.0 && current <= mcconf->l_current_max) {
+..\terminal.c(348): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (current > 0.0 && current <= mcconf->l_current_max) {
+..\terminal.c(369): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (duty > 0.0 && duty < 0.9) {
+..\terminal.c(369): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (duty > 0.0 && duty < 0.9) {
+..\terminal.c(404): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (current > 0.0 && current <= mc_interface_get_configuration()->l_current_max &&
+..\terminal.c(405): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					min_erpm > 0.0 && duty > 0.02 && res >= 0.0) {
+..\terminal.c(405): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					min_erpm > 0.0 && duty > 0.02 && res >= 0.0) {
+..\terminal.c(405): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					min_erpm > 0.0 && duty > 0.02 && res >= 0.0) {
+..\terminal.c(440): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (duty > 0.0) {
+..\terminal.c(457): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					mc_interface_set_duty(((float)i / 100.0) * duty);
+..\terminal.c(469): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					samples += 1.0;
+..\terminal.c(487): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				float linkage = (vq_avg - mcconf->foc_motor_r * iq_avg) / RPM2RADPS_f(rpm_avg);
+..\terminal.c(509): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (current > 0.0 && current <= mc_interface_get_configuration()->l_current_max &&
+..\terminal.c(510): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					erpm_per_sec > 0.0 && duty > 0.02 && res >= 0.0 && ind >= 0.0) {
+..\terminal.c(510): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					erpm_per_sec > 0.0 && duty > 0.02 && res >= 0.0 && ind >= 0.0) {
+..\terminal.c(510): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					erpm_per_sec > 0.0 && duty > 0.02 && res >= 0.0 && ind >= 0.0) {
+..\terminal.c(510): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					erpm_per_sec > 0.0 && duty > 0.02 && res >= 0.0 && ind >= 0.0) {
+..\terminal.c(599): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (current >= 0.0 && erpm >= 0.0) {
+..\terminal.c(599): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (current >= 0.0 && erpm >= 0.0) {
+..\terminal.c(615): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (duty >= 0.0 && erpm >= 0.0) {
+..\terminal.c(615): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (duty >= 0.0 && erpm >= 0.0) {
+..\terminal.c(645): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (current > 0.0 && current <= mc_interface_get_configuration()->l_current_max) {
+..\terminal.c(673): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					angle >= 0.0 && angle <= 360.0) {
+..\terminal.c(673): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					angle >= 0.0 && angle <= 360.0) {
+..\terminal.c(674): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (time <= 1e-6) {
+..\terminal.c(680): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					for (float t = 0.0;t < time;t += 0.002) {
+..\terminal.c(707): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (max_power_loss > 0.0) {
+..\terminal.c(723): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					commands_printf("Motor R             : %.2f mOhm", (double)(mcconf->foc_motor_r * 1e3));
+..\terminal.c(724): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					commands_printf("Motor L             : %.2f uH", (double)(mcconf->foc_motor_l * 1e6));
+..\terminal.c(725): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					commands_printf("Motor Flux Linkage  : %.3f mWb", (double)(mcconf->foc_motor_flux_linkage * 1e3));
+..\terminal.c(796): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (max_power_loss > 0.0) {
+..\terminal.c(809): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					commands_printf("Motor R             : %.2f mOhm", (double)(mcconf->foc_motor_r * 1e3));
+..\terminal.c(810): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					commands_printf("Motor L             : %.2f microH", (double)(mcconf->foc_motor_l * 1e6));
+..\terminal.c(811): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					commands_printf("Motor Flux Linkage  : %.3f mWb", (double)(mcconf->foc_motor_flux_linkage * 1e3));
+..\terminal.c(951): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (current > 0.0 && current <= mc_interface_get_configuration()->l_current_max) {
+..\terminal.c(971): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					mcpwm_foc_set_openloop_phase((float)i * current / 1000.0, phase);
+..\terminal.c(999): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					commands_send_plot_points(phase, (float)(hall & 1) * 1.02);
+..\terminal.c(1001): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					commands_send_plot_points(phase, (float)((hall >> 1) & 1) * 1.04);
+..\terminal.c(1003): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					commands_send_plot_points(phase, (float)((hall >> 2) & 1) * 1.06);
+..\terminal.c(1007): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					phase += 1.0;
+..\terminal.c(1047): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				float deviation = (max - min) / 2.0;
+..\terminal.c(1093): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (id >= 0 && channel >= 0 && duty >= 0.0 && duty <= 1.0) {
+..\terminal.c(1093): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (id >= 0 && channel >= 0 && duty >= 0.0 && duty <= 1.0) {
+..\terminal.c(1118): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (angle_now > -360.0 && angle_now < 360.0) {
+..\terminal.c: 63 warnings, 0 errors
+compiling worker.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\worker.c: 2 warnings, 0 errors
+compiling app.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\applications\app.c(72): warning:  #223-D: function "imu_init" declared implicitly
+  	imu_init(&conf->imu_conf);
+..\applications\app.c: 3 warnings, 0 errors
+compiling gpdrive.c...
+..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\gpdrive.c(401): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t duty = (uint32_t) (((float)TIM1->ARR / 2.0) * mod + ((float)TIM1->ARR / 2.0));
+..\gpdrive.c(401): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		uint32_t duty = (uint32_t) (((float)TIM1->ARR / 2.0) * mod + ((float)TIM1->ARR / 2.0));
+..\gpdrive.c(594): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\gpdrive.c(606): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			m_current_state.voltage_int += err * m_conf->gpd_current_ki * (1.0 / m_fsw_now);
+..\gpdrive.c: 6 warnings, 0 errors
+compiling app_ppm.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\applications\app_ppm.c(63): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	direction_hyst = config.max_erpm_for_dir * 0.20;
+..\applications\app_ppm.c(129): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			servo_val += 1.0;
+..\applications\app_ppm.c(130): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			servo_val /= 2.0;
+..\applications\app_ppm.c(161): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < MAX_CAN_AGE) {
+..\applications\app_ppm.c(187): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		const float dt = (float)ST2MS(chVTTimeElapsedSinceX(last_time)) / 1000.0;
+..\applications\app_ppm.c(190): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (ramp_time > 0.01) {
+..\applications\app_ppm.c(224): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (servo_val >= 0.0) {
+..\applications\app_ppm.c(225): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (servo_val == 0.0) {
+..\applications\app_ppm.c(237): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (rpm_now >= 0.0) { //Accelerate
+..\applications\app_ppm.c(276): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (fabsf(servo_val) < 0.001) {
+..\applications\app_ppm.c(284): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if ((servo_val >= 0.0 && rpm_now >= 0.0) || (servo_val < 0.0 && rpm_now <= 0.0)) { //Accelerate
+..\applications\app_ppm.c(284): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if ((servo_val >= 0.0 && rpm_now >= 0.0) || (servo_val < 0.0 && rpm_now <= 0.0)) { //Accelerate
+..\applications\app_ppm.c(284): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if ((servo_val >= 0.0 && rpm_now >= 0.0) || (servo_val < 0.0 && rpm_now <= 0.0)) { //Accelerate
+..\applications\app_ppm.c(284): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if ((servo_val >= 0.0 && rpm_now >= 0.0) || (servo_val < 0.0 && rpm_now <= 0.0)) { //Accelerate
+..\applications\app_ppm.c(290): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (fabsf(servo_val) < 0.001) {
+..\applications\app_ppm.c(298): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			current_mode_brake = servo_val < 0.0;
+..\applications\app_ppm.c(300): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (servo_val >= 0.0 && rpm_now > 0.0) { //Positive input AND going forward = accelerating
+..\applications\app_ppm.c(300): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (servo_val >= 0.0 && rpm_now > 0.0) { //Positive input AND going forward = accelerating
+..\applications\app_ppm.c(306): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (fabsf(servo_val) < 0.001) {
+..\applications\app_ppm.c(313): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (fabsf(servo_val) < 0.001) {
+..\applications\app_ppm.c(325): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (fabsf(servo_val) < 0.001) {
+..\applications\app_ppm.c(365): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < MAX_CAN_AGE) {
+..\applications\app_ppm.c(390): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (servo_val < -0.92 && duty_highest_abs < (mcconf->l_min_duty * 1.5) &&
+..\applications\app_ppm.c(391): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					current_highest_abs < (mcconf->l_current_max * mcconf->l_current_max_scale * 0.7)) {
+..\applications\app_ppm.c(409): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  						if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < MAX_CAN_AGE) {
+..\applications\app_ppm.c(429): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < MAX_CAN_AGE) {
+..\applications\app_ppm.c(448): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  						if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < MAX_CAN_AGE) {
+..\applications\app_ppm.c(457): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (current_out < 0.0) { // Not braking AND negative current = reverse engaged
+..\applications\app_ppm.c(479): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  						if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < MAX_CAN_AGE) {
+..\applications\app_ppm.c(481): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  							if (config.tc && config.tc_max_diff > 1.0 && !autoTCdisengaged) {
+..\applications\app_ppm.c(499): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if (config.tc && config.tc_max_diff > 1.0) {
+..\applications\app_ppm.c: 33 warnings, 0 errors
+compiling drv8301.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\hwconf\drv8301.c: 2 warnings, 0 errors
+compiling hw_60.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\hwconf\hw_60.c(295): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float val1 = ADC_VOLTS(ADC_IND_SHUTDOWN);
+..\hwconf\hw_60.c(297): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float val2 = ADC_VOLTS(ADC_IND_SHUTDOWN);
+..\hwconf\hw_60.c(306): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return (bt_diff > 0.12);
+..\hwconf\hw_60.c: 5 warnings, 0 errors
+compiling app_uartcomm.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\applications\app_uartcomm.c: 2 warnings, 0 errors
+compiling hw.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\hwconf\hw_60.c(295): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float val1 = ADC_VOLTS(ADC_IND_SHUTDOWN);
+..\hwconf\hw_60.c(297): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float val2 = ADC_VOLTS(ADC_IND_SHUTDOWN);
+..\hwconf\hw_60.c(306): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return (bt_diff > 0.12);
+..\hwconf\hw.c: 5 warnings, 0 errors
+compiling app_nunchuk.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\applications\app_nunchuk.c(88): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return ((float)chuck_d.js_y - 128.0) / 128.0;
+..\applications\app_nunchuk.c(213): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		UTILS_LP_FAST(rpm_filtered, mc_interface_get_rpm(), 0.5);
+..\applications\app_nunchuk.c(215): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		const float dt = (float)OUTPUT_ITERATION_TIME_MS / 1000.0;
+..\applications\app_nunchuk.c(240): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		const float max_current_diff = mcconf->l_current_max * mcconf->l_current_max_scale * 0.2;
+..\applications\app_nunchuk.c(276): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if ((is_reverse && pid_rpm > 0.0) || (!is_reverse && pid_rpm < 0.0)) {
+..\applications\app_nunchuk.c(276): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if ((is_reverse && pid_rpm > 0.0) || (!is_reverse && pid_rpm < 0.0)) {
+..\applications\app_nunchuk.c(284): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if (pid_rpm > 0.0) {
+..\applications\app_nunchuk.c(288): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					pid_rpm -= (out_val * config.stick_erpm_per_s_in_cc) * ((float)OUTPUT_ITERATION_TIME_MS / 1000.0);
+..\applications\app_nunchuk.c(294): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if (pid_rpm < 0.0) {
+..\applications\app_nunchuk.c(298): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					pid_rpm += (out_val * config.stick_erpm_per_s_in_cc) * ((float)OUTPUT_ITERATION_TIME_MS / 1000.0);
+..\applications\app_nunchuk.c(315): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < MAX_CAN_AGE) {
+..\applications\app_nunchuk.c(337): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if ((out_val > 0.0 && duty_now > 0.0) || (out_val < 0.0 && duty_now < 0.0)) {
+..\applications\app_nunchuk.c(337): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if ((out_val > 0.0 && duty_now > 0.0) || (out_val < 0.0 && duty_now < 0.0)) {
+..\applications\app_nunchuk.c(337): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if ((out_val > 0.0 && duty_now > 0.0) || (out_val < 0.0 && duty_now < 0.0)) {
+..\applications\app_nunchuk.c(337): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if ((out_val > 0.0 && duty_now > 0.0) || (out_val < 0.0 && duty_now < 0.0)) {
+..\applications\app_nunchuk.c(343): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (out_val >= 0.0 && ((is_reverse ? -1.0 : 1.0) * duty_now) > 0.0) {
+..\applications\app_nunchuk.c(360): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < MAX_CAN_AGE) {
+..\applications\app_nunchuk.c(369): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if (msg->duty < 0.0) {
+..\applications\app_nunchuk.c(389): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if (out_val < -0.92 && duty_highest_abs < (mcconf->l_min_duty * 1.5) &&
+..\applications\app_nunchuk.c(390): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					fabsf(current_highest) < (mcconf->l_current_max * mcconf->l_current_max_scale * 0.7)) {
+..\applications\app_nunchuk.c(408): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  						if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < MAX_CAN_AGE) {
+..\applications\app_nunchuk.c(430): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (ramp_time > 0.01) {
+..\applications\app_nunchuk.c(431): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			const float ramp_step = ((float)OUTPUT_ITERATION_TIME_MS * current_range) / (ramp_time * 1000.0);
+..\applications\app_nunchuk.c(443): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					utils_step_towards(&goal_tmp2, -current_highest, 2.0 * ramp_step);
+..\applications\app_nunchuk.c(447): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					utils_step_towards(&goal_tmp2, current_highest, 2.0 * ramp_step);
+..\applications\app_nunchuk.c(453): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if ((!is_decreasing || is_decreasing2) && fabsf(out_val) > 0.001) {
+..\applications\app_nunchuk.c(462): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if (current < 0.0 && config.ctrl_type != CHUK_CTRL_TYPE_CURRENT_BIDIRECTIONAL) {
+..\applications\app_nunchuk.c(470): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < MAX_CAN_AGE) {
+..\applications\app_nunchuk.c(484): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if (msg->id >= 0 && UTILS_AGE_S(msg->rx_time) < MAX_CAN_AGE) {
+..\applications\app_nunchuk.c(485): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  						bool is_braking = (current > 0.0 && msg->duty < 0.0) || (current < 0.0 && msg->duty > 0.0);
+..\applications\app_nunchuk.c(485): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  						bool is_braking = (current > 0.0 && msg->duty < 0.0) || (current < 0.0 && msg->duty > 0.0);
+..\applications\app_nunchuk.c(485): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  						bool is_braking = (current > 0.0 && msg->duty < 0.0) || (current < 0.0 && msg->duty > 0.0);
+..\applications\app_nunchuk.c(485): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  						bool is_braking = (current > 0.0 && msg->duty < 0.0) || (current < 0.0 && msg->duty > 0.0);
+..\applications\app_nunchuk.c(487): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  						if (config.tc && config.tc_max_diff > 1.0 && !is_braking) {
+..\applications\app_nunchuk.c(501): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				bool is_braking = (current > 0.0 && duty_now < 0.0) || (current < 0.0 && duty_now > 0.0);
+..\applications\app_nunchuk.c(501): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				bool is_braking = (current > 0.0 && duty_now < 0.0) || (current < 0.0 && duty_now > 0.0);
+..\applications\app_nunchuk.c(501): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				bool is_braking = (current > 0.0 && duty_now < 0.0) || (current < 0.0 && duty_now > 0.0);
+..\applications\app_nunchuk.c(501): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				bool is_braking = (current > 0.0 && duty_now < 0.0) || (current < 0.0 && duty_now > 0.0);
+..\applications\app_nunchuk.c(503): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  				if (config.tc && config.tc_max_diff > 1.0 && !is_braking) {
+..\applications\app_nunchuk.c: 41 warnings, 0 errors
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_iwdg.c...
+compiling misc.c...
+compiling nrf_driver.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\nrf\nrf_driver.c(217): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			pl[index++] = (uint8_t)((int8_t)(mc_interface_get_tot_current_directional_filtered() /
+..\nrf\nrf_driver.c(382): warning:  #188-D: enumerated type mixed with another type
+  	MOTE_PACKET packet = buf[0];
+..\nrf\nrf_driver.c(404): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		mstate.vbat = (float)buffer_get_int16(buf, &ind) / 1000.0;
+..\nrf\nrf_driver.c: 4 warnings, 0 errors
+compiling stm32f4xx_exti.c...
+compiling board.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\board.c: 2 warnings, 0 errors
+compiling stm32f4xx_adc.c...
+compiling stm32f4xx_dma.c...
+compiling spi_sw.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\nrf\spi_sw.c: 2 warnings, 0 errors
+compiling rf.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\nrf\rf.c: 2 warnings, 0 errors
+compiling rfhelp.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+..\nrf\rfhelp.c(31): warning:  #550-D: variable "rx_addr_set"  was set but never used
+  static bool rx_addr_set[6];
+..\nrf\rfhelp.c: 3 warnings, 0 errors
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_wwdg.c...
+compiling stm32f4xx_rcc.c...
+compiling stm32f4xx_tim.c...
+compiling osal.c...
+compiling adc.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\adc.c: 2 warnings, 0 errors
+compiling ext.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\ext.c: 2 warnings, 0 errors
+compiling dac.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\dac.c: 2 warnings, 0 errors
+compiling gpt.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\gpt.c: 2 warnings, 0 errors
+compiling can.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\can.c: 2 warnings, 0 errors
+compiling hal_mmcsd.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\hal_mmcsd.c: 2 warnings, 0 errors
+compiling i2c.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\i2c.c: 2 warnings, 0 errors
+compiling hal_queues.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\hal_queues.c: 2 warnings, 0 errors
+compiling hal.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\hal.c: 2 warnings, 0 errors
+compiling i2s.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\i2s.c: 2 warnings, 0 errors
+compiling icu.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\icu.c: 2 warnings, 0 errors
+compiling serial.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\serial.c: 2 warnings, 0 errors
+compiling pal.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\pal.c: 2 warnings, 0 errors
+compiling uart.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\uart.c: 2 warnings, 0 errors
+compiling rtc.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\rtc.c: 2 warnings, 0 errors
+compiling pwm.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\pwm.c: 2 warnings, 0 errors
+compiling sdc.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\sdc.c: 2 warnings, 0 errors
+compiling mac.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\mac.c: 2 warnings, 0 errors
+compiling mmc_spi.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\mmc_spi.c: 2 warnings, 0 errors
+compiling st.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\st.c: 2 warnings, 0 errors
+compiling serial_usb.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\serial_usb.c: 2 warnings, 0 errors
+compiling spi.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\spi.c: 2 warnings, 0 errors
+compiling chdebug.c...
+compiling chdynamic.c...
+compiling chevents.c...
+compiling chmemcore.c...
+compiling chcond.c...
+compiling chmboxes.c...
+compiling chheap.c...
+compiling chmempools.c...
+compiling chmsg.c...
+compiling chmtx.c...
+compiling usb.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\src\usb.c: 2 warnings, 0 errors
+assembling chcoreasm_v7m.s...
+compiling chqueues.c...
+compiling chstats.c...
+compiling chschd.c...
+compiling chsem.c...
+compiling chregistry.c...
+compiling chsys.c...
+compiling chtm.c...
+compiling chvt.c...
+compiling chthreads.c...
+assembling cstartup.s...
+assembling vectors.s...
+compiling chcore_v7m.c...
+compiling chcore.c...
+compiling stm32_dma.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\STM32F4xx\stm32_dma.c: 2 warnings, 0 errors
+compiling adc_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\STM32F4xx\adc_lld.c: 2 warnings, 0 errors
+compiling hal_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\STM32F4xx\hal_lld.c: 2 warnings, 0 errors
+compiling sdc_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\sdc_lld.c: 2 warnings, 0 errors
+compiling ext_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\ext_lld.c: 2 warnings, 0 errors
+compiling ext_lld_isr.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\STM32F4xx\ext_lld_isr.c: 2 warnings, 0 errors
+compiling mac_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\mac_lld.c: 2 warnings, 0 errors
+compiling nvic.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\common\ARMCMx\nvic.c: 2 warnings, 0 errors
+compiling dac_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\DACv1\dac_lld.c: 2 warnings, 0 errors
+compiling can_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\can_lld.c: 2 warnings, 0 errors
+compiling pal_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\GPIOv2\pal_lld.c: 2 warnings, 0 errors
+compiling pwm_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\TIMv1\pwm_lld.c: 2 warnings, 0 errors
+compiling spi_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\SPIv1\spi_lld.c: 2 warnings, 0 errors
+compiling usb_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\OTGv1\usb_lld.c(215): warning:  #3108-D: attribute "packed" does not apply here
+      *fifop = *((PACKED_VAR uint32_t *)buf);
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\OTGv1\usb_lld.c(313): warning:  #3108-D: attribute "packed" does not apply here
+      *((PACKED_VAR uint32_t *)buf) = w;
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\OTGv1\usb_lld.c(342): warning:  #3108-D: attribute "packed" does not apply here
+        *((PACKED_VAR uint32_t *)buf) = w;
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\OTGv1\usb_lld.c: 5 warnings, 0 errors
+compiling i2s_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\SPIv1\i2s_lld.c: 2 warnings, 0 errors
+compiling st_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\TIMv1\st_lld.c: 2 warnings, 0 errors
+compiling icu_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\TIMv1\icu_lld.c: 2 warnings, 0 errors
+compiling rtc_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\RTCv2\rtc_lld.c: 2 warnings, 0 errors
+compiling i2c_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\I2Cv1\i2c_lld.c: 2 warnings, 0 errors
+compiling uart_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\USARTv1\uart_lld.c: 2 warnings, 0 errors
+compiling minilzo.c...
+compiling canard.c...
+compiling gpt_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\TIMv1\gpt_lld.c: 2 warnings, 0 errors
+compiling serial_lld.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\ChibiOS_3.0.2\os\hal\ports\STM32\LLD\USARTv1\serial_lld.c: 2 warnings, 0 errors
+compiling esc_RawCommand.c...
+.\..\libcanard\dsdl\uavcan/equipment/esc/RawCommand.h(71): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_EQUIPMENT_ESC_RAWCOMMAND
+..\libcanard\dsdl\uavcan\equipment\esc\esc_RawCommand.c: 1 warning, 0 errors
+compiling esc_RPMCommand.c...
+.\..\libcanard\dsdl\uavcan/equipment/esc/RPMCommand.h(72): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_EQUIPMENT_ESC_RPMCOMMAND
+..\libcanard\dsdl\uavcan\equipment\esc\esc_RPMCommand.c: 1 warning, 0 errors
+compiling esc_Status.c...
+.\..\libcanard\dsdl\uavcan/equipment/esc/Status.h(86): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_EQUIPMENT_ESC_STATUS
+..\libcanard\dsdl\uavcan\equipment\esc\esc_Status.c: 1 warning, 0 errors
+compiling qmlui.c...
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+..\qmlui\qmlui.c: 1 warning, 0 errors
+compiling canard_driver.c...
+.\..\board.h(52): warning:  #47-D: incompatible redefinition of macro "STM32F407xx" 
+  #define STM32F407xx
+.\..\datatypes.h(1133): warning:  #66-D: enumeration value is out of "int" range
+  	CAN_PACKET_MAKE_ENUM_32_BITS = 0xFFFFFFFF,
+.\..\libcanard\dsdl\uavcan/equipment/esc/Status.h(86): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_EQUIPMENT_ESC_STATUS
+.\..\libcanard\dsdl\uavcan/equipment/esc/RawCommand.h(71): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_EQUIPMENT_ESC_RAWCOMMAND
+.\..\libcanard\dsdl\uavcan/equipment/esc/RPMCommand.h(72): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_EQUIPMENT_ESC_RPMCOMMAND
+.\..\libcanard\dsdl\uavcan/protocol/param/Empty.h(55): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_PARAM_EMPTY
+.\..\libcanard\dsdl\uavcan/protocol/param/NumericValue.h(89): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_PARAM_NUMERICVALUE
+.\..\libcanard\dsdl\uavcan/protocol/param/Value.h(103): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_PARAM_VALUE
+.\..\libcanard\dsdl\uavcan/protocol/param/GetSet.h(172): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_PARAM_GETSET
+.\..\libcanard\dsdl\uavcan/protocol/HardwareVersion.h(93): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_HARDWAREVERSION
+.\..\libcanard\dsdl\uavcan/protocol/NodeStatus.h(136): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_NODESTATUS
+.\..\libcanard\dsdl\uavcan/protocol/SoftwareVersion.h(111): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_SOFTWAREVERSION
+.\..\libcanard\dsdl\uavcan/protocol/GetNodeInfo.h(120): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_GETNODEINFO
+.\..\libcanard\dsdl\uavcan/protocol/RestartNode.h(98): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_RESTARTNODE
+.\..\libcanard\dsdl\uavcan/protocol/file/Path.h(75): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_FILE_PATH
+.\..\libcanard\dsdl\uavcan/protocol/file/BeginFirmwareUpdate.h(130): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_FILE_BEGINFIRMWAREUPDATE
+.\..\libcanard\dsdl\uavcan/protocol/file/Error.h(85): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_FILE_ERROR
+.\..\libcanard\dsdl\uavcan/protocol/file/Read.h(119): warning:  #1-D: last line of file ends without a newline
+  #endif // __UAVCAN_PROTOCOL_FILE_READ
+..\libcanard\canard_driver.c(237): warning:  #188-D: enumerated type mixed with another type
+  	appconf->can_mode = (uint8_t)getParamByName("uavcan_mode")->val;
+..\libcanard\canard_driver.c(238): warning:  #188-D: enumerated type mixed with another type
+  	appconf->can_baud_rate = (uint8_t)getParamByName("can_baud_rate")->val;
+..\libcanard\canard_driver.c(240): warning:  #188-D: enumerated type mixed with another type
+  	appconf->send_can_status = (uint8_t)getParamByName("can_send_status")->val;
+..\libcanard\canard_driver.c(407): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	status.power_rating_pct = (fabsf(mc_interface_get_tot_current()) /
+..\libcanard\canard_driver.c(411): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	status.temperature = mc_interface_temp_fet_filtered() + 273.15;
+..\libcanard\canard_driver.c(511): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			float raw_val = ((float)cmd.cmd.data[app_get_configuration()->uavcan_esc_index]) / 8192.0;
+..\libcanard\canard_driver.c(521): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if (raw_val >= 0.0) {
+..\libcanard\canard_driver.c(649): warning:  #111-D: statement is unreachable
+  			break;
+..\libcanard\canard_driver.c(686): warning:  #188-D: enumerated type mixed with another type
+  				pkt.min_value.union_tag = UAVCAN_PROTOCOL_PARAM_VALUE_INTEGER_VALUE;
+..\libcanard\canard_driver.c(687): warning:  #188-D: enumerated type mixed with another type
+  				pkt.max_value.union_tag = UAVCAN_PROTOCOL_PARAM_VALUE_INTEGER_VALUE;
+..\libcanard\canard_driver.c(697): warning:  #188-D: enumerated type mixed with another type
+  				pkt.min_value.union_tag = UAVCAN_PROTOCOL_PARAM_VALUE_INTEGER_VALUE;
+..\libcanard\canard_driver.c(698): warning:  #188-D: enumerated type mixed with another type
+  				pkt.max_value.union_tag = UAVCAN_PROTOCOL_PARAM_VALUE_INTEGER_VALUE;
+..\libcanard\canard_driver.c(708): warning:  #188-D: enumerated type mixed with another type
+  				pkt.min_value.union_tag = UAVCAN_PROTOCOL_PARAM_VALUE_INTEGER_VALUE;
+..\libcanard\canard_driver.c(709): warning:  #188-D: enumerated type mixed with another type
+  				pkt.max_value.union_tag = UAVCAN_PROTOCOL_PARAM_VALUE_INTEGER_VALUE;
+..\libcanard\canard_driver.c(719): warning:  #188-D: enumerated type mixed with another type
+  				pkt.min_value.union_tag = UAVCAN_PROTOCOL_PARAM_VALUE_REAL_VALUE;
+..\libcanard\canard_driver.c(720): warning:  #188-D: enumerated type mixed with another type
+  				pkt.max_value.union_tag = UAVCAN_PROTOCOL_PARAM_VALUE_REAL_VALUE;
+..\libcanard\canard_driver.c(83): warning:  #550-D: variable "my_node_id"  was set but never used
+  static uint8_t my_node_id = 0;
+..\libcanard\canard_driver.c: 35 warnings, 0 errors
+linking...
+.\output\obj\..\project.axf: Error: L6200E: Symbol hw_init_gpio multiply defined (by hw.o and hw_60.o).
+.\output\obj\..\project.axf: Error: L6200E: Symbol hw_setup_adc_channels multiply defined (by hw.o and hw_60.o).
+.\output\obj\..\project.axf: Error: L6200E: Symbol hw_sample_shutdown_button multiply defined (by hw.o and hw_60.o).
+.\output\obj\..\project.axf: Error: L6200E: Symbol hw_stop_i2c multiply defined (by hw.o and hw_60.o).
+.\output\obj\..\project.axf: Error: L6200E: Symbol hw_start_i2c multiply defined (by hw.o and hw_60.o).
+.\output\obj\..\project.axf: Error: L6200E: Symbol hw_try_restore_i2c multiply defined (by hw.o and hw_60.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 6 error messages.
+".\output\obj\..\project.axf" - 6 Error(s), 1106 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil.STM32F4xx_DFP.2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_project
+  C:\Users\zhang\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\zhang\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+Target not created.
+Build Time Elapsed:  00:00:39
+</pre>
+</body>
+</html>
